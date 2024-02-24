@@ -20,7 +20,7 @@ import { ref } from 'vue'
 
 const items = ref([
   {
-    src: new URL('@/assets/Carousel-1.jpg', import.meta.url).href
+    src: new URL('@/assets/Carousel-3.jpg', import.meta.url).href
   },
   {
     src: new URL('@/assets/Carousel-4.jpg', import.meta.url).href
