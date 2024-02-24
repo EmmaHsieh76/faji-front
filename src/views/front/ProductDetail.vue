@@ -59,7 +59,7 @@
       <v-col cols="12" md="6">
         <h2><font color="#D92323">【{{product.category}}】</font>&nbsp;{{product.name}}</h2>
         <v-divider></v-divider>
-        <p class="my-2">售價{{product.price}}</p>
+        <p class="my-2 font-weight-bold">售價{{product.price}}</p>
         <p style="white-space: pre;">{{product.description}}</p>
         <v-form :disabled="isSubmitting" @submit.prevent="submit">
               <v-text-field type="number" min="0" v-model.number="quantity.value.value" :error-messages="quantity.errorMessage.value" density="confortable" variant="outlined" placeholder="數量"
@@ -82,7 +82,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useApi } from '@/composables/axios'
 import { useSnackbar } from 'vuetify-use-dialog'
@@ -106,7 +106,15 @@ const product = ref({
   category: ''
 })
 
-const mainImage = ref('product.images[0]')
+// 主圖片
+const mainImage = ref(null)
+
+// 當 product 物件更新後，設定 mainImage 的值
+watch(() => product.value.images, (images) => {
+  mainImage.value = images[0]
+})
+// const mainImage = ref(product.value.images[0])
+// const mainImage = computed(() => product.value.images[0])
 const changeMainImage = (image) => {
   mainImage.value = image
 }
