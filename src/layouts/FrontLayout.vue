@@ -37,7 +37,7 @@
         <div class="d-flex justify-center" >
          <img
          class=""
-          src="../../public/logo14@2x.png"
+          src="@/assets/logo14@2x.png"
           width="45%"
           >
           <!-- <p id="logo">發記冰品</p> -->
