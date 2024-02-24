@@ -91,7 +91,7 @@
             <!-- src="../../../public/haccp.jpg" -->
               <v-img
               width="100%"
-              src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+              src="@/assets/good3.png"
               ></v-img>
               <v-card-title>安心證書</v-card-title>
               <v-card-text>
@@ -105,7 +105,7 @@
             >
               <v-img
               width="100%"
-              src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+              src="@/assets/good2.jpg"
               ></v-img>
               <v-card-title>安心證書</v-card-title>
               <v-card-text>
