@@ -27,7 +27,7 @@
               <v-img
             :width="70"
             :height="70"
-            aspect-ratio="1/1"
+            cover
             class="ma-2 pa-2"
             :src="product.images[0]"
             @click="changeMainImage(product.images[0])"
@@ -37,7 +37,7 @@
               <v-img
             :width="70"
             :height="70"
-            aspect-ratio="1/1"
+            cover
             class="ma-2 pa-2"
             :src="product.images[1]"
             @click="changeMainImage(product.images[1])"
@@ -47,7 +47,7 @@
               <v-img
             :width="70"
             :height="70"
-            aspect-ratio="1/1"
+            cover
             class="ma-2 pa-2"
             :src="product.images[2]"
             @click="changeMainImage(product.images[2])"
