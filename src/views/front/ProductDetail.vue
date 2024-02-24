@@ -11,13 +11,13 @@
       <v-col cols="12" md="6">
         <v-table>
           <tr >
-            <td colspan="2" class="d-flex justify-center">
+            <td colspan="3" class="d-flex justify-center">
               <v-img
               :width="350"
               :height="350"
               aspect-ratio="1/1"
               cover
-              :src="product.images[0]"
+              :src="mainImage.value"
               ></v-img>
             </td>
           </tr>
@@ -29,7 +29,18 @@
             :height="70"
             aspect-ratio="1/1"
             class="ma-2 pa-2"
+            :src="product.images[0]"
+            @click="changeMainImage(product.images[0])"
+            ></v-img>
+            </td>
+            <td>
+              <v-img
+            :width="70"
+            :height="70"
+            aspect-ratio="1/1"
+            class="ma-2 pa-2"
             :src="product.images[1]"
+            @click="changeMainImage(product.images[1])"
             ></v-img>
             </td>
             <td>
@@ -39,6 +50,7 @@
             aspect-ratio="1/1"
             class="ma-2 pa-2"
             :src="product.images[2]"
+            @click="changeMainImage(product.images[2])"
             ></v-img>
             </td>
           </tr>
@@ -84,6 +96,11 @@ const { api, apiAuth } = useApi()
 const createSnackbar = useSnackbar()
 const user = useUserStore()
 
+const mainImage = ref(product.images[0])
+
+const changeMainImage = (image) => {
+  mainImage.value = image
+}
 const product = ref({
   _id: '',
   name: '',
