@@ -37,7 +37,7 @@
 
           <v-btn color="forth" size="x-large" class="font-weight-bold d-flex w-100"  variant="tonal" 
           type="submit"
-          :disabled="isSubmitting"
+          :isSubmitting="isSubmitting"
           >
           確認修改個人資料
           </v-btn>
@@ -100,6 +100,7 @@ const account = ref('')
 const password = ref('')
 const name = ref('')
 const phone = ref('')
+const newPassword = ref('')
 
 name.value = user.name
 phone.value = user.phone

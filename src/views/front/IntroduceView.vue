@@ -10,7 +10,7 @@
         height="225"
         aspect-ratio="1/1"
         cover
-        :src="item.image"
+        src="item.image"
         >
         </v-img>
       </v-col>
