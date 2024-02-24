@@ -10,74 +10,92 @@
       </v-col>
       <v-col cols="12" md="6">
         <v-table>
-          <tr >
+          <tr>
             <td colspan="3" class="d-flex justify-center">
               <v-img
-              :width="350"
-              :height="350"
-              aspect-ratio="1/1"
-              cover
-              :src="mainImage.value"
+                :width="350"
+                :height="350"
+                aspect-ratio="1/1"
+                cover
+                :src="mainImage.value"
               ></v-img>
             </td>
           </tr>
-          <tr><br></tr>
+          <tr>
+            <br />
+          </tr>
           <tr class="d-flex justify-center">
             <td>
               <v-img
-            :width="70"
-            :height="70"
-            aspect-ratio="1/1"
-            class="ma-2 pa-2"
-            :src="product.images[0]"
-            @click="changeMainImage(product.images[0])"
-            ></v-img>
+                :width="70"
+                :height="70"
+                aspect-ratio="1/1"
+                class="ma-2 pa-2"
+                :src="product.images[0]"
+                @click="changeMainImage(product.images[0])"
+              ></v-img>
             </td>
             <td>
               <v-img
-            :width="70"
-            :height="70"
-            aspect-ratio="1/1"
-            class="ma-2 pa-2"
-            :src="product.images[1]"
-            @click="changeMainImage(product.images[1])"
-            ></v-img>
+                :width="70"
+                :height="70"
+                aspect-ratio="1/1"
+                class="ma-2 pa-2"
+                :src="product.images[1]"
+                @click="changeMainImage(product.images[1])"
+              ></v-img>
             </td>
             <td>
               <v-img
-            :width="70"
-            :height="70"
-            aspect-ratio="1/1"
-            class="ma-2 pa-2"
-            :src="product.images[2]"
-            @click="changeMainImage(product.images[2])"
-            ></v-img>
+                :width="70"
+                :height="70"
+                aspect-ratio="1/1"
+                class="ma-2 pa-2"
+                :src="product.images[2]"
+                @click="changeMainImage(product.images[2])"
+              ></v-img>
             </td>
           </tr>
         </v-table>
       </v-col>
       <v-col cols="12" md="6">
-        <h2><font color="#D92323">【人氣商品】</font>&nbsp;{{product.name}}</h2>
+        <h2>
+          <font color="#D92323">【人氣商品】</font>&nbsp;{{ product.name }}
+        </h2>
         <v-divider></v-divider>
-        <p class="my-2">售價{{product.price}}</p>
-        <p style="white-space: pre;">{{product.description}}</p>
+        <p class="my-2">售價{{ product.price }}</p>
+        <p style="white-space: pre">{{ product.description }}</p>
         <v-form :disabled="isSubmitting" @submit.prevent="submit">
-              <v-text-field type="number" min="0" v-model.number="quantity.value.value" :error-messages="quantity.errorMessage.value" density="confortable" variant="outlined" placeholder="數量"
-              style="width: 570px"
-              ></v-text-field>
-              <v-btn type="submit" prepend-icon="mdi-cart" :loading="isSubmitting"
-              style="width:570px" color="seventh">加入購物車</v-btn>
-
+          <v-text-field
+            type="number"
+            min="0"
+            v-model.number="quantity.value.value"
+            :error-messages="quantity.errorMessage.value"
+            density="confortable"
+            variant="outlined"
+            placeholder="數量"
+            style="width: 570px"
+          ></v-text-field>
+          <v-btn
+            type="submit"
+            prepend-icon="mdi-cart"
+            :loading="isSubmitting"
+            style="width: 570px"
+            color="seventh"
+            >加入購物車</v-btn
+          >
         </v-form>
       </v-col>
     </v-row>
   </v-container>
-  <v-overlay class="align-center justify-center text-center"
-  :model-value="!product.sell" persistent
+  <v-overlay
+    class="align-center justify-center text-center"
+    :model-value="!product.sell"
+    persistent
   >
-  <h1 class="text-h1 text-red">已下架</h1>
-  <br>
-  <v-btn to="/" color="third">回首頁</v-btn>
+    <h1 class="text-h1 text-red">已下架</h1>
+    <br />
+    <v-btn to="/" color="third">回首頁</v-btn>
   </v-overlay>
 </template>
 
@@ -96,11 +114,6 @@ const { api, apiAuth } = useApi()
 const createSnackbar = useSnackbar()
 const user = useUserStore()
 
-const mainImage = ref(product.images[0])
-
-const changeMainImage = (image) => {
-  mainImage.value = image
-}
 const product = ref({
   _id: '',
   name: '',
@@ -111,8 +124,17 @@ const product = ref({
   category: ''
 })
 
+const mainImage = ref(product.value.images[0])
+
+const changeMainImage = (image) => {
+  mainImage.value = image
+}
 const schema = yup.object({
-  quantity: yup.number().typeError('缺少數量').required('缺少數量').min(1, '數量最小為 1')
+  quantity: yup
+    .number()
+    .typeError('缺少數量')
+    .required('缺少數量')
+    .min(1, '數量最小為 1')
 })
 const { isSubmitting, handleSubmit } = useForm({
   validationSchema: schema,
@@ -207,6 +229,6 @@ onMounted(async () => {
 
 <style scoped>
 input {
-  padding-inline: 30px !important;;
+  padding-inline: 30px !important;
 }
 </style>
