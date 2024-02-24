@@ -7,7 +7,7 @@
     :height="500"
     aspect-ratio="1/1"
     cover
-    src="../../../public/carousel-6.jpg"
+    src="@/assets/carousel-6.jpg"
     rounded="lg"
     >
     </v-img>

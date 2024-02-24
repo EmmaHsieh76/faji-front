@@ -28,7 +28,7 @@
             <v-img
             width="auto"
             height="400"
-            src="../../../public/7.jpg"
+            src="@/assets/7.jpg"
             rounded
             ></v-img>
             <div class="mt-10">

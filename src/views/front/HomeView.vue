@@ -20,17 +20,18 @@ import { ref } from 'vue'
 
 const items = ref([
   {
-    src: '../../../public/Carousel-3.jpg'
+    src: new URL('@/assets/Carousel-1.jpg', import.meta.url).href
   },
   {
-    src: '../../../public/Carousel-4.jpg'
+    src: new URL('@/assets/Carousel-4.jpg', import.meta.url).href
   },
   {
-    src: '../../../public/Carousel-2.jpg'
+    src: new URL('@/assets/Carousel-2.jpg', import.meta.url).href
   },
   {
-    src: '../../../public/Carousel-5.jpg'
-  }
+    src: new URL('@/assets/Carousel-5.jpg', import.meta.url).href
+  },
+
 ])
 
 </script>
