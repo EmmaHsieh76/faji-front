@@ -106,7 +106,7 @@ const product = ref({
   category: ''
 })
 
-const mainImage = ref(product.value.images[0])
+const mainImage = ref('product.images[0]')
 const changeMainImage = (image) => {
   mainImage.value = image
 }
