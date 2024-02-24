@@ -17,7 +17,7 @@
               :height="350"
               aspect-ratio="1/1"
               cover
-              :src="mainImage"
+              src="mainImage"
               ></v-img>
             </td>
           </tr>
