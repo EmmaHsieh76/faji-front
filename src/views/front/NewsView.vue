@@ -6,8 +6,8 @@
   </v-container>
 </template>
 
-<script>
-
+<script setup>
+</script>
 
 <style scoped>
 </style>
