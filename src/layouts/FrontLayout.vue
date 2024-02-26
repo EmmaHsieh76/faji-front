@@ -37,7 +37,7 @@
         <div class="d-flex justify-center" >
          <img
          class=""
-          src="@/assets/logo14@2x.png"
+          src="@/assets/logo2.png"
           width="45%"
           >
           <!-- <p id="logo">發記冰品</p> -->
@@ -65,7 +65,7 @@
 <v-main style="min-height: 100vh;">
   <router-view :key="$route.path"></router-view>
 </v-main>
-<v-footer class="pa-0">
+<v-footer class="mt-1 px-0">
   <VRow class="text-center bg-third">
     <VCol cols="12">
     <strong>
@@ -111,11 +111,11 @@ const drawer = ref(false)
 // computed=>判斷登入狀態，顯示不同的導覽列
 const navItems = computed(() => {
   return [
-    { to: '/about', text: '關於發記', show: true && !user.isAdmin },
-    { to: '/news', text: '最新消息', show: true && !user.isAdmin },
-    { to: '/introduce', text: '冰品介紹', show: true && !user.isAdmin },
+    { to: '/about', text: '關於發記', show: true },
+    { to: '/news', text: '最新消息', show: false },
+    { to: '/introduce', text: '冰品介紹', show: true },
     { to: '/product', text: '快速預訂', show: true },
-    { to: '/content', text: '聯繫我們', show: true && !user.isAdmin },
+    { to: '/content', text: '聯繫我們', show: true },
     { to: '/cart', text: '我的購物車', show: user.isLogin },
     // show: !user.isLogin => 使用者沒有登入時顯示
     { to: '/signup', text: '會員專區', show: !user.isLogin },

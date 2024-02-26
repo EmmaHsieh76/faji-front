@@ -126,7 +126,7 @@ const routes = [
       {
         path: 'member',
         name: 'Member',
-        component: () => import('@/views/front/MemberView.vue'),
+        component: () => import('@/layouts/MemberView.vue'),
         meta: {
           title: '發記冰品 | 會員專區',
           login: true,
@@ -134,7 +134,7 @@ const routes = [
         },
         children: [
           {
-            path: 'orders',
+            path: '',
             name: 'Orders',
             component: () => import('@/views/front/OrdersView.vue'),
             meta: {
@@ -154,16 +154,6 @@ const routes = [
             }
           }
         ]
-      },
-      {
-        path: 'modification',
-        name: 'Modification',
-        component: () => import('@/views/front/ModificationView.vue'),
-        meta: {
-          title: '發記冰品 | 資料修改',
-          login: true,
-          admin: false
-        }
       }
     ]
   },

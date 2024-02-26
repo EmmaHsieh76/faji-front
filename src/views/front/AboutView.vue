@@ -6,7 +6,7 @@
           min-width="250"
         >
           <v-list>
-            <v-list-subheader>關於發記</v-list-subheader>
+            <v-list-subheader class="font-weight-bold">關於發記</v-list-subheader>
             <v-divider></v-divider>
             <v-list-item
               v-for="(item, i) in items"
@@ -16,7 +16,7 @@
               rounded="xl"
               hover
             >
-            <v-list-item-title class="ps-5" @click="handleClick(item)">{{item.text}}</v-list-item-title>
+            <v-list-item-title class="ps-5 font-weight-bold" @click="handleClick(item)">{{item.text}}</v-list-item-title>
             </v-list-item>
           </v-list>
         </v-card>
@@ -28,8 +28,9 @@
             <v-img
             width="auto"
             height="400"
-            src="@/assets/7.jpg"
-            rounded
+            src="@/assets/story.jpg"
+            cover
+            rounded="lg"
             ></v-img>
             <div class="mt-10">
               <p>民國54年，一位堅強的女士為了維持生計，開始在路邊賣起了剉冰，從那時起，這家傳統剉冰店就開啟了三代傳承的美味旅程。女士堅毅的眼神和熱情的笑容，總是迎接著街坊鄰里，讓每一位來店的人都感受到家的溫馨。她的拿手絕活是手工製作的粉粿，每一塊都充滿女士的心血，Q彈的口感讓人回味無窮。</p>
@@ -91,7 +92,7 @@
             <!-- src="../../../public/haccp.jpg" -->
               <v-img
               width="100%"
-              src="@/assets/good3.png"
+              src="@/assets/safe1.png"
               ></v-img>
               <v-card-title>安心證書</v-card-title>
               <v-card-text>
@@ -105,7 +106,7 @@
             >
               <v-img
               width="100%"
-              src="@/assets/good2.jpg"
+              src="@/assets/safe2.jpg"
               ></v-img>
               <v-card-title>安心證書</v-card-title>
               <v-card-text>
@@ -139,4 +140,5 @@ function handleClick (item) {
 .third {
   color: #F9C80E;
 }
+
 </style>

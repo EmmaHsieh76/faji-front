@@ -1,19 +1,13 @@
 <template>
-  <div class="about-view">
-    <h1>最新消息</h1>
-    <p>Welcome to our website!</p>
-  </div>
+  <v-container>
+    <v-row>
+      <v-col cols="4"></v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-export default {
-  name: 'AboutView'
-}
-</script>
+
 
 <style scoped>
-.about-view {
-  text-align: center;
-  margin-top: 50px;
-}
 </style>

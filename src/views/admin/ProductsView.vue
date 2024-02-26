@@ -95,27 +95,33 @@
       <v-text-field
       label="名稱"
       v-model="name.value.value"
+      variant="outlined"
       :error-messages="name.errorMessage.value"
       ></v-text-field>
       <v-text-field
       label="價格"
       type="number" min="0"
       v-model="price.value.value"
+      variant="outlined"
       :error-messages="price.errorMessage.value"
       ></v-text-field>
       <v-select
       label="分類"
       :items="categories"
       v-model="category.value.value"
+      variant="outlined"
       :error-messages="category.errorMessage.value"
       ></v-select>
       <v-checkbox
       label="上架"
       v-model="sell.value.value"
+      variant="outlined"
       :error-messages="sell.errorMessage.value"
       ></v-checkbox>
       <v-textarea
-      label="說明"
+      label="商品說明"
+      placeholder="商品說明"
+      variant="outlined"
       v-model="description.value.value"
       :error-messages="description.errorMessage.value"
       ></v-textarea>

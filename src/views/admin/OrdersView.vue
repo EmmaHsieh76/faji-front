@@ -41,16 +41,16 @@ const headers = [
   { title: '取貨人', key: 'name' },
   { title: '取貨日', key: 'date' },
   { title: '取貨時間', key: 'time' },
-  { title: '商品', key: 'cart', sortable: false },
-  {
-    title: '訂購金額',
-    key: 'price',
-    value: (item) => {
-      return item.cart.reduce((total, current) => {
-        return total + current.quantity * current.product.price
-      }, 0)
-    }
-  }
+  { title: '商品', key: 'cart', sortable: false }
+  // {
+  //   title: '訂購金額',
+  //   key: 'price',
+  //   value: (item) => {
+  //     return item.cart.reduce((total, current) => {
+  //       return total + current.quantity * current.product.price
+  //     }, 0)
+  //   }
+  // }
 ]
 
 onMounted(async () => {

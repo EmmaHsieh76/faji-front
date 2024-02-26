@@ -43,7 +43,7 @@
     <p><strong class="text-red text-h4">NT.{{total}}</strong></p>
   </v-col>
   <v-col cols="12">
-    <v-sheet height="100%" width="100%"  border rounded color="grey-lighten-3" style="">
+    <v-sheet height="100%" width="100%"  border rounded color="grey-lighten-5 py-3 text-center" style="">
       <h4 class="ps-2 text-h5 font-weight-bold">【取貨人資料】</h4>
     </v-sheet>
   </v-col>
@@ -54,6 +54,7 @@
       <template #activator="{ props }">
         <VTextField
           label="取貨日期"
+          variant="outlined"
           :model-value="selectedDate"
           prepend-inner-icon="mdi-calendar-range"
           color="forth"
@@ -76,6 +77,7 @@
     <v-select
       label="取貨時間"
       color="forth"
+      variant="outlined"
       prepend-inner-icon="mdi-clock-time-four-outline"
       :items="times"
       :rules="[rules.required]"
@@ -85,6 +87,7 @@
     <v-text-field
       label="姓名"
       prepend-inner-icon="mdi-account-circle-outline"
+      variant="outlined"
       color="forth"
       v-model="name"
       :rules="[rules.required]" />
@@ -92,6 +95,7 @@
   <v-col cols="12" md="3">
     <v-text-field
       label="電話"
+      variant="outlined"
       prepend-inner-icon="mdi-cellphone"
       color="forth"
       v-model="phone"
@@ -219,11 +223,6 @@ const checkout = async () => {
   try {
     // 結帳=>新增到訂單頁
     await apiAuth.post('/orders', {
-      user: user._id,
-      cart: cart.value.map(item => ({
-        product: item.product._id,
-        quantity: item.quantity
-      })),
       date: selectedDate.value,
       time: time.value,
       name: name.value,
@@ -241,7 +240,7 @@ const checkout = async () => {
       }
     })
     // 路由導向訂單頁
-    router.push('/member/orders')
+    router.push('/member/')
   } catch (error) {
     const text = error?.response?.data?.message || '發生錯誤，請稍後再試'
     createSnackbar({
