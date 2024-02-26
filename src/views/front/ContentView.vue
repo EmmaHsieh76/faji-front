@@ -8,6 +8,7 @@
     aspect-ratio="1/1"
     cover
     src="@/assets/contentUs.png"
+    position="left top"
     rounded="lg"
     >
     </v-img>

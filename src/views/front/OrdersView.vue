@@ -7,10 +7,10 @@
       <v-col cols="12">
         <v-data-table :items="orders" :headers="headers">
           <template #[`item.createdAt`]="{ item }">
-             {{ new Date(item.createdAt).toLocaleString() }}
+             {{ new Date(item.createdAt).toLocaleDateString() }}
           </template>
           <template #[`item.date`]="{ item }">
-             {{ new Date(item.createdAt).toLocaleDateString() }}
+             {{ new Date(item.date).toLocaleDateString() }}
           </template>
           <template #[`item.cart`]="{ item }">
             <ul>

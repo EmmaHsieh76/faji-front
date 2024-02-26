@@ -1,13 +1,13 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="4">hi</v-col>
+      <v-col cols="4"></v-col>
     </v-row>
   </v-container>
 </template>
 
-<script setup>
-</script>
+<script>
+
 
 <style scoped>
 </style>
