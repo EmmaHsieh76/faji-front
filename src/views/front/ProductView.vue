@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container max-width="1200">
     <v-row>
       <v-col cols="12">
         <h1 class="text-center">商品資訊</h1>

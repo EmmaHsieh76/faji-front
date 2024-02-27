@@ -184,12 +184,12 @@ onMounted(async () => {
       {
         title: '首頁',
         disabled: false,
-        href: '/'
+        href: '/faji-front/#/'
       },
       {
         title: '快速預訂',
         disabled: false,
-        href: '/product#/product'
+        href: '/faji-front/#/product'
       },
       {
         title: `${product.value.name}`,
