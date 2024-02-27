@@ -168,11 +168,6 @@ const icons = ref([
 
 <style scoped lang="scss">
 
-@media (min-width: 1920px){
-  .v-container {
-    max-width: 1200px;
-}
-}
 
  .v-app-bar-title {
   font-size: 1.5rem;
