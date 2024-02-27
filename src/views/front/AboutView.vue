@@ -140,4 +140,10 @@ function handleClick (item) {
   color: #F9C80E;
 }
 
+@media (min-width: 1920px){
+  .v-container {
+    max-width: 500px;
+}
+}
+
 </style>
