@@ -62,7 +62,11 @@
     </v-container>
   </v-app-bar>
 <!-- 每個分頁頁面內容 -->
-<v-main style="min-height: 100vh;">
+<v-main
+style="min-height: 100vh;"
+class="bg-image"
+
+>
   <router-view :key="$route.path"></router-view>
 </v-main>
 <v-footer class="mt-1 px-0">
@@ -168,7 +172,6 @@ const icons = ref([
 
 <style scoped lang="scss">
 
-
  .v-app-bar-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -193,4 +196,13 @@ const icons = ref([
   font-size: 1.5rem;
   font-weight: bold;
  }
+
+ .bg-image {
+  background-image: url("@/assets/snow4.png");
+  background-color: #f3efef;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+}
+
 </style>

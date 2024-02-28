@@ -26,11 +26,6 @@
                 @click:append-inner="tableApplySearch" @keydown.enter="tableApplySearch">
               </VTextField>
             </template>
-            <!-- === 指定 avatar 欄位的顯示方式 -->
-            <!-- [`item.key`]，插槽後面= 可以帶出它的資料，這裡解構出 key item -->
-            <!-- <template #[`item.avatar`]="{ item }">
-              <VImg :src="item.avatar" height="30px" contain></VImg>
-            </template> -->
             <!-- === 指定 role 欄位的顯示方式 -->
             <template #[`item.role`]="{ item }">
               <VIcon icon="mdi-check" v-if="item.role === 1 " color="sixth"></VIcon>
@@ -71,9 +66,6 @@
           <VCardTitle class="text-center mt-3 pb-0">編輯使用者權限</VCardTitle>
 
           <VCardText>
-            <!-- <VTextField label="帳號" variant="outlined" density="compact" class="pb-3"
-            type="email"
-              v-model="account.value.value" :error-messages="account.errorMessage.value"></VTextField> -->
               <VRadioGroup v-model="role.value.value" :error-messages="role.errorMessage.value" inline>
                 <VRadio label="一般會員" :value="0"></VRadio>
                 <VRadio label="管理員" :value="1"></VRadio>
@@ -82,15 +74,10 @@
                 <VRadio label="正常" :value="false"></VRadio>
                 <VRadio label="異常" :value="true"></VRadio>
               </VRadioGroup>
-              <v-textarea  label="異常原因" variant="outlined" density="compact" class="pb-3"
+              <v-textarea  label="異常原因" variant="outlined" density="compact" class="py-3"
               :disabled="disabled"
                 v-model="blacklistReason.value.value" :error-messages="blacklistReason.errorMessage.value"
                 ></v-textarea >
-                <!-- :disabled="!blacklist.value.value" -->
-                <!-- <VueFileAgent v-model="fileRecords" v-model:rawModelValue="rawFileRecords"
-              accept="image/jpeg,image/png" max-size="2MB" :error-text="{type: '檔案格式不支援，只接受 .jpeg .png', size: '檔案超過 2MB 大小限制'}"
-              deletable help-text="選擇大頭貼圖片或拖曳到這裡" :max-files="1" ref="fileAgent"
-              ></VueFileAgent> -->
           </VCardText>
 
           <VCardActions>
@@ -174,12 +161,6 @@ const schema = yup.object({
     .string()
     .required('缺少使用者帳號')
     .typeError('信箱格式錯誤'),
-  // .min(4, '帳號名稱最少 4 字')
-  // .max(20, '帳號名稱最多 20 字'),
-  // email: yup
-  //   .string()
-  // // .typeError('信箱格式錯誤')
-  //   .required('缺少使用者信箱'),
   role: yup
     .number()
     .required('缺少使用者角色'),

@@ -2,7 +2,7 @@
   <v-container max-width="1200">
     <v-row>
       <v-col cols="12">
-        <h1 class="text-center">商品資訊</h1>
+        <h1 class="text-center third">商品資訊</h1>
       </v-col>
       <v-divider></v-divider>
       <v-col cols="12" md="6" lg="4" v-for="product in products" :key="product._id" class="d-flex justify-center product" >

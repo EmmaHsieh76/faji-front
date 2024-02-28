@@ -1,7 +1,22 @@
 body {
   font-size: 1.2rem;
 
- 
+  .third {
+    color: #F9C80E;
+  }
+
+  .overflow-hidden{
+    overflow: hidden;
+  }
+  .img-enlarge{
+    overflow:hidden;
+    transform:scale(1,1);
+    transition: all 2s ease-out;
+  }
+  
+  .img-enlarge:hover {
+    transform: scale(1.2, 1.2);
+  }
 }
 
 @media (min-width: 1920px){

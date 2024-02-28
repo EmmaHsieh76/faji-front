@@ -23,26 +23,6 @@ const routes = [
           admin: false
         }
       },
-      // {
-      //   path: 'register',
-      //   name: 'Register',
-      //   component: () => import('@/views/front/RegisterView.vue'),
-      //   meta: {
-      //     title: '發記冰品|註冊',
-      //     login: false,
-      //     admin: false
-      //   }
-      // },
-      // {
-      //   path: 'login',
-      //   name: 'Login',
-      //   component: () => import('@/views/front/LoginView.vue'),
-      //   meta: {
-      //     title: '發記冰品|登入',
-      //     login: false,
-      //     admin: false
-      //   }
-      // },
       {
         path: 'about',
         name: 'About',

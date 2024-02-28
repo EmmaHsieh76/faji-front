@@ -21,8 +21,8 @@
           </v-list>
         </v-card>
       </v-col>
-      <v-col cols="9" v-if="selectedItem === '品牌故事'" class="d-flex flex-column justify-center">
-            <h1 class="text-center third">發記故事</h1>
+      <v-col cols="9" v-if="selectedItem === '品牌故事'">
+            <h2 class="text-center third">發記故事</h2>
             <v-divider class="mb-3"></v-divider>
             <v-img
             width="auto"
@@ -31,7 +31,7 @@
             cover
             rounded="lg"
             ></v-img>
-            <div class="mt-10 text-center">
+            <div class="mt-10">
               <p>民國54年，一位堅強的女人為了維持生計，開始在路邊賣起了剉冰，從那時起，就開啟了三代傳承的美味旅程。女人堅毅的眼神和熱情的笑容，總是迎接著街坊鄰里，讓每一位來店的人都感受到家的溫馨。她的拿手功夫是手工製作的粉粿，每一塊都充滿女士的心血，Q彈的口感讓人回味無窮。</p>
               <p>隨著時光流轉，女士養大了兒子們抱得孫子成了阿嬤，她的剉冰店漸漸成為當地的代表性小吃店，更是家人朋友聚會的首選。孩子們在這裡長大，阿嬤的粉粿成了他們童年的味道，伴隨著歲月的變遷，傳統的味道卻始終保持著不變。時至今日，傳承至第三代的剉冰店仍然秉持著阿嬤的初衷，每一樣品項都堅持純手工製作。</p>
               <p>這裡的剉冰不僅是食物，更是一段家族的歷史。每一次品嚐，都是對三代傳承的尊敬，是對阿嬤辛勤付出的致敬。這家古早味剉冰店不僅提供美味的食物，更是一個凝聚情感和回憶的地方，讓顧客們感受到濃厚的人情味和時光的靜好。</p>
@@ -41,46 +41,50 @@
             </div>
       </v-col>
       <v-col cols="9" v-else-if="selectedItem === '媒體報導'">
+          <h2 class="text-center third">媒體報導</h2>
+          <v-divider class="mb-3"></v-divider>
           <v-row>
             <v-col cols="6">
               <v-card>
               <v-card-title>感謝 先吃再說 Eat First 推薦</v-card-title>
-              <iframe  width="100%" height="350" src="https://www.youtube.com/embed/rHcDyhV0TUw?si=gPtn56f7ecR19xyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe  width="100%" height="300" src="https://www.youtube.com/embed/rHcDyhV0TUw?si=gPtn56f7ecR19xyg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </v-card>
             </v-col>
             <v-col cols="6">
               <v-card>
               <v-card-title>感謝 感謝全民認真花 推薦</v-card-title>
-              <iframe width="100%" height="350" src="https://www.youtube.com/embed/eKpi0A3BwV0?si=LFQjRkGjwbCYvJtN&amp;start=180" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe width="100%" height="300" src="https://www.youtube.com/embed/eKpi0A3BwV0?si=LFQjRkGjwbCYvJtN&amp;start=180" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </v-card>
             </v-col>
             <v-col cols="6">
               <v-card>
               <v-card-title>感謝 高點電視 推薦</v-card-title>
-              <iframe width="100%" height="350" src="https://www.youtube.com/embed/2Q7AbuAz3Jc?si=S-d4RVSr_SE3yarO&amp;start=500" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe width="100%" height="300" src="https://www.youtube.com/embed/2Q7AbuAz3Jc?si=S-d4RVSr_SE3yarO&amp;start=500" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </v-card>
             </v-col>
             <v-col cols="6">
               <v-card>
               <v-card-title>感謝 厭世奶爸出走日記 推薦</v-card-title>
-              <iframe width="100%" height="350" src="https://www.youtube.com/embed/Wm3ZMy9csSY?si=G6yamBLwEIsETg_3&amp;start=546" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe width="100%" height="300" src="https://www.youtube.com/embed/Wm3ZMy9csSY?si=G6yamBLwEIsETg_3&amp;start=546" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </v-card>
             </v-col>
             <v-col cols="6">
               <v-card>
               <v-card-title>感謝 千千進食中 推薦</v-card-title>
-              <iframe width="100%" height="350" src="https://www.youtube.com/embed/0pskDDN-eYM?si=CcXqZAkNYwJl2Rbm&amp;start=726" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe width="100%" height="300" src="https://www.youtube.com/embed/0pskDDN-eYM?si=CcXqZAkNYwJl2Rbm&amp;start=726" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </v-card>
             </v-col>
             <v-col cols="6">
               <v-card>
               <v-card-title>感謝 野人七號部落 介紹</v-card-title>
-              <iframe width="100%" height="350" src="https://www.youtube.com/embed/kcW5cHLVZ8I?si=1LXw8uQ8mMmUWuET&amp;start=353" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <iframe width="100%" height="300" src="https://www.youtube.com/embed/kcW5cHLVZ8I?si=1LXw8uQ8mMmUWuET&amp;start=353" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </v-card>
             </v-col>
           </v-row>
       </v-col>
       <v-col cols="9" v-else-if="selectedItem === '安心證書'">
+        <h2 class="text-center third">合格證書</h2>
+        <v-divider class="mb-3"></v-divider>
         <v-row>
           <v-col cols="6">
             <v-card
@@ -134,10 +138,3 @@ function handleClick (item) {
   selectedItem.value = item.text
 }
 </script>
-
-<style scoped>
-.third {
-  color: #F9C80E;
-}
-
-</style>
