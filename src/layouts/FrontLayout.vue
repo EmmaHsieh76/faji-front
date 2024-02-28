@@ -115,7 +115,7 @@ const drawer = ref(false)
 // computed=>判斷登入狀態，顯示不同的導覽列
 const navItems = computed(() => {
   return [
-    { to: '/about', text: '關於發記', show:  !user.isAdmin },
+    { to: '/about', text: '關於發記', show: !user.isAdmin },
     { to: '/news', text: '最新消息', show: false },
     { to: '/introduce', text: '冰品介紹', show: !user.isAdmin},
     { to: '/product', text: '快速預訂', show: !user.isAdmin},
