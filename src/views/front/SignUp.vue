@@ -8,7 +8,7 @@
       fixed-tabs
     >
       <v-tab :value="1" class="font-weight-black"><v-icon>mdi-login</v-icon>登入</v-tab>
-      <v-tab :value="2"><v-icon>mdi-account-plus-outline</v-icon>註冊</v-tab>
+      <v-tab :value="2" class="font-weight-black"><v-icon>mdi-account-plus-outline</v-icon>註冊</v-tab>
     </v-tabs>
     <v-window v-model="tab">
       <v-window-item :value="1">
