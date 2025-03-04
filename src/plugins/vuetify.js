@@ -18,6 +18,7 @@ import { zhHant } from 'vuetify/locale'
 export default createVuetify({
   defaultAssets: {
     fonts: false, // 停用內建字體
+    icons: 'mdi', // 使用 mdi 圖標
   },
   theme: {
     themes: {
