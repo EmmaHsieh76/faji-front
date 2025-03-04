@@ -93,7 +93,7 @@
             >
               <v-img
               width="100%"
-              src="@/assets/safe1.png"
+              src="@/assets/safe1.jpg"
               cover
               ></v-img>
               <v-card-title>安心證書</v-card-title>

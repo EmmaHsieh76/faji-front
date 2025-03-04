@@ -3,7 +3,7 @@
     cycle
     hide-delimiter-background
     show-arrows="hover"
-    height="calc(100vh - 64px)"
+    height="calc(100vh - 284px)"
   >
     <v-carousel-item
       v-for="(item, i) in items"
@@ -20,18 +20,14 @@ import { ref } from 'vue'
 
 const items = ref([
   {
-    src: new URL('@/assets/Carousel-1.jpg', import.meta.url).href
+    src: new URL('@/assets/Carousel-5.png', import.meta.url).href
   },
   {
-    src: new URL('@/assets/Carousel-2.jpg', import.meta.url).href
+    src: new URL('@/assets/Carousel-6.png', import.meta.url).href
   },
   {
-    src: new URL('@/assets/Carousel-3.jpg', import.meta.url).href
-  },
-  {
-    src: new URL('@/assets/Carousel-4.jpg', import.meta.url).href
-  },
-
+    src: new URL('@/assets/Carousel-7.png', import.meta.url).href
+  }
 ])
 
 </script>
