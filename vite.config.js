@@ -11,6 +11,13 @@ import { fileURLToPath, URL } from 'node:url'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined, // 讓 Vite 不自動拆分 chunk
+      }
+    }
+  },
   plugins: [
     vue({
       template: { transformAssetUrls }
@@ -26,8 +33,14 @@ export default defineConfig({
           styles: 'wght@100;300;400;500;700;900'
         }]
       },
-      preload:false
+      preload: false
     }),
+    {
+      name: 'remove-preload',
+      transformIndexHtml(html) {
+        return html.replace(/<link rel="preload".*?>/g, '');
+      }
+    },
     VueDevTools()
   ],
   define: { 'process.env': {} },
