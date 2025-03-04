@@ -35,6 +35,9 @@ export default createVuetify({
   },
   locale: {
     locale: 'zhHant',
-    messages: { zhHant }
-  }
+    messages: { zhHant } // 中文字體引入
+  },
+  defaultAssets: {
+    font: false, // 關閉 Vuetify 預設字型載入
+  },
 })
