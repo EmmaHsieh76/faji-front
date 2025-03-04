@@ -10,7 +10,7 @@ import 'vuetify/styles'
 
 // Composables
 import { createVuetify } from 'vuetify'
-import { mdi } from 'vuetify/iconsets/mdi-svg' 
+import { mdi, aliases } from 'vuetify/iconsets/mdi-svg' 
 
 // 中文語言包
 import { zhHant } from 'vuetify/locale'
