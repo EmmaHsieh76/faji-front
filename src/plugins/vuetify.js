@@ -43,6 +43,7 @@ export default createVuetify({
     messages: { zhHant } // 中文字體引入
   },
   defaultAssets: {
-    font: false, //  確保不載入 Webfont
+    font: false, //  關閉預設字型載入
+    icons: false  //確保不載入 Webfont
   },
 })
