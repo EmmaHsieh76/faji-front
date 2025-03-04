@@ -5,17 +5,22 @@
  */
 
 // Styles
-import '@mdi/font/css/materialdesignicons.css'
+// import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 
 // Composables
 import { createVuetify } from 'vuetify'
+import { mdi } from 'vuetify/iconsets/mdi-svg' 
 
 // 中文語言包
 import { zhHant } from 'vuetify/locale'
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
+  icons: {
+   defaultSet: 'mdi', // 指定 mdi 圖標集
+   sets: { mdi },  // 使用 SVG 而非 Webfont
+  },
   theme: {
     themes: {
       light: {
@@ -38,6 +43,6 @@ export default createVuetify({
     messages: { zhHant } // 中文字體引入
   },
   defaultAssets: {
-    font: false, // 關閉 Vuetify 預設字型載入
+    font: false, //  確保不載入 Webfont
   },
 })
