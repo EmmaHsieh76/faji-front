@@ -1,0 +1,1 @@
+import{_ as t,a2 as o,a4 as r,a5 as a,c as e,aa as s}from"./index-22136f92.js";import{V as c}from"./VContainer-bafbf90e.js";import{a as n,V as l}from"./VRow-ceb85e9c.js";const _={};function f(d,i){return o(),r(c,null,{default:a(()=>[e(l,null,{default:a(()=>[e(n,{cols:"4"},{default:a(()=>[s("news")]),_:1})]),_:1})]),_:1})}const p=t(_,[["render",f]]);export{p as default};
