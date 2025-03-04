@@ -1,5 +1,12 @@
+@font-face {
+  font-family: "MaterialIcons";
+  src: url("../assets/materialdesignicons-webfont-bd725a7a.ttf") format("truetype");
+  font-display: swap;
+}
+
 body {
   font-size: 1.2rem;
+  font-family: "MaterialIcons", sans-serif;
 
   .third {
     color: #F9C80E;
@@ -25,6 +32,4 @@ body {
   }
 }
 
-@font-face {
-  font-display: swap;
-}
+
