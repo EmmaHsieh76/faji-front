@@ -5,12 +5,11 @@
  */
 
 // Styles
-// import '@mdi/font/css/materialdesignicons.css'
+import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 
 // Composables
 import { createVuetify } from 'vuetify'
-import { mdi, aliases } from 'vuetify/iconsets/mdi-svg' 
 
 // 中文語言包
 import { zhHant } from 'vuetify/locale'
@@ -42,9 +41,5 @@ export default createVuetify({
   locale: {
     locale: 'zhHant',
     messages: { zhHant } // 中文字體引入
-  },
-  defaultAssets: {
-    font: false, //  關閉預設字型載入
-    icons: false  //確保不載入 Webfont
-  },
+  }
 })
