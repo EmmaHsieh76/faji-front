@@ -18,7 +18,8 @@ import { zhHant } from 'vuetify/locale'
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   icons: {
-   defaultSet: 'mdi', // 指定 mdi 圖標集
+    defaultSet: 'mdi', // 指定 mdi 圖標集
+    aliases, // 設定圖標別名
    sets: { mdi },  // 使用 SVG 而非 Webfont
   },
   theme: {
