@@ -16,6 +16,9 @@ import { zhHant } from 'vuetify/locale'
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
+  defaultAssets: {
+    fonts: false, // 停用內建字體
+  },
   theme: {
     themes: {
       light: {
