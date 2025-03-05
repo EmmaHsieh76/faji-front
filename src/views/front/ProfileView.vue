@@ -124,7 +124,7 @@
         >取消</VBtn>
         <VBtn color="forth" rounded
         @click="editAvatar" :disabled="avatarSubmiting"
-        ></VBtn>
+        >送出</VBtn>
       </VCardActions>
     </VCard>
   </VDialog>
