@@ -1,7 +1,7 @@
 <template>
   <VContainer>
     <VRow>
-      <VCol cols="6" class="text-center" sm="12" >
+      <VCol cols="12" class="text-center" sm="12" >
         <VAvatar :image="user.avatar" size="260"
         ></VAvatar>
         <VBtn icon="mdi-pencil" size="x-small" color="third" style="vertical-align: bottom;"
@@ -9,10 +9,10 @@
         ></VBtn>
         <h2 class="third">{{ user.account }}</h2>
       </VCol>
-      <VCol cols="6" sm="12" >
-          <VCard>
+      <VCol cols="12" sm="12" md="6" >
+          <VCard class="bg-eigth">
           <!-- 帳號 密碼 名字 手機 -->
-            <VToolbar color="eigth" flat class="third">
+            <VToolbar color="third" flat >
               <VIcon class="ps-8" icon="mdi-account" ></VIcon>
               <VToolbarTitle class="font-weight-bold">個人資料</VToolbarTitle>
               <VSpacer></VSpacer>
@@ -24,7 +24,7 @@
                 
               </VBtn>
             </VToolbar>
-            <VForm @submit.prevent="submit" :disable="isSubmitting || !isEditing">
+            <VForm @submit.prevent="submit" :disabled=" !isEditing || isSubmitting">
               <!-- <VContainer>
                 <h4>帳號</h4>
                 <h4 color="forth" class="pb-3 mt-2">{{ account }}</h4>
@@ -59,7 +59,7 @@
                 <VRow>
                   <VCol cols="12" class=pb-0 >
                     <VTextField
-                    lable="帳號"
+                    label="帳號"
                     variant="outlined"
                     density="comfortable"
                     v-model="account.value.value"
@@ -68,7 +68,7 @@
                   </VCol>
                   <VCol cols="12" class=pb-0 >
                     <VTextField
-                    lable="姓名"
+                    label="姓名"
                     variant="outlined"
                     density="comfortable"
                     v-model="name.value.value"
@@ -77,7 +77,7 @@
                   </VCol>
                   <VCol cols="12" class=pb-0 >
                     <VTextField
-                    lable="電話"
+                    label="電話"
                     variant="outlined"
                     density="comfortable"
                     v-model="phone.value.value"
@@ -232,7 +232,7 @@ const submit = handleSubmit(async (values) => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'green',
+        color: 'third',
         location: 'center'
       }
     })
@@ -245,7 +245,7 @@ const submit = handleSubmit(async (values) => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'secondary',
+        color: 'seventh',
         location: 'center'
       }
     })
@@ -281,7 +281,7 @@ const editAvatar = async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'back',
+        color: 'third',
         location: 'bottom'
       }
     })
@@ -294,7 +294,7 @@ const editAvatar = async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'secondary',
+        color: 'seventh',
         location: 'bottom'
       }
     })
@@ -302,59 +302,6 @@ const editAvatar = async () => {
   // 防止重複送出
   avatarSubmiting.value = false
 }
-
-
-// // 預設 帳號 密碼 名字 手機為會員資料
-// const account = ref('')
-// // const password = ref('')
-// const name = ref('')
-// const phone = ref('')
-
-// account.value = user.account
-// // password.value = user.password
-// name.value = user.name
-// phone.value = user.phone
-
-// // 規則
-// const rules = ref({
-//   required: value => !!value || '必填欄位'
-// })
-
-// 提交修改個人資料，按鈕不能按
-// const isSubmitting = ref(false)
-// const submit =  async () => {
-//   const values = {
-//     account: account.value,
-//     name: name.value,
-//     phone: phone.value
-//   }
-
-//   try {
-//     await apiAuth.patch('/users/user/' + user._id, values)
-//     user.login(values)
-//     createSnackbar({
-//       text: '更新成功',
-//       showCloseButton: false,
-//       snackbarProps: {
-//         timeout: 2000,
-//         color: 'green',
-//         location: 'bottom'
-//       }
-//     })
-//   } catch (error) {
-//     console.error(error)
-//     const text = error?.response?.data?.message || '發生錯誤，請稍後再試'
-//     createSnackbar({
-//       text,
-//       showCloseButton: false,
-//       snackbarProps: {
-//         timeout: 2000,
-//         color: 'red',
-//         location: 'bottom'
-//       }
-//     })
-//   }
-// }
 
 
 </script>

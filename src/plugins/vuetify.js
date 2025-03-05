@@ -16,16 +16,15 @@ import { zhHant } from 'vuetify/locale'
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
-  defaultAssets: {
-    fonts: false, // 停用內建字體
-    icons: 'mdi', // 使用 mdi 圖標
-  },
   theme: {
+    options: {
+      customProperties: true
+    },
     themes: {
       light: {
         colors: {
-          primary: '#1867C0',
-          secondary: '#5CBBF6',
+          // primary: '#1867C0',
+          // secondary: '#5CBBF6',
           third: '#F9C80E',
           forth: '#E67B21',
           fifth: '#31312D',

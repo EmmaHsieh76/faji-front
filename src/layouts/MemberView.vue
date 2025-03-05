@@ -1,7 +1,7 @@
 <template>
-<v-container>
+  <v-container>
     <v-row class="mt-5">
-      <v-col cols="3" class="d-flex justify-center">
+      <v-col cols="4" class="d-flex justify-center">
         <v-card
           min-width="200"
         >

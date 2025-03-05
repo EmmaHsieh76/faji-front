@@ -28,16 +28,12 @@ export default defineConfig({
     }),
     ViteFonts({
       google: {
-        families: []
-      },
-      preload: false
-    }),
-    {
-      name: 'remove-preload',
-      transformIndexHtml(html) {
-        return html.replace(/<link rel="preload".*?>/g, '');
+        families: [{
+          name: 'Roboto',
+          styles: 'wght@100;300;400;500;700;900'
+        }]
       }
-    },
+    }),
     VueDevTools()
   ],
   define: { 'process.env': {} },
