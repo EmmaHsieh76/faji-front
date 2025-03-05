@@ -24,8 +24,8 @@ export default createVuetify({
     themes: {
       light: {
         colors: {
-          // primary: '#1867C0',
-          // secondary: '#5CBBF6',
+          primary: '#1867C0',
+          secondary: '#5CBBF6',
           third: '#F9C80E',
           forth: '#E67B21',
           fifth: '#31312D',

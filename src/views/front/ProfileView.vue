@@ -1,20 +1,19 @@
 <template>
   <VContainer>
     <VRow>
-      <VCol cols="6">
+      <VCol cols="6" class="text-center" sm="12" >
         <VAvatar :image="user.avatar" size="260"
         ></VAvatar>
-        <VBtn icon="mdi-pencil" size="x-small" color="primary" style="vertical-align: bottom;"
+        <VBtn icon="mdi-pencil" size="x-small" color="third" style="vertical-align: bottom;"
         @click="openDialog"
         ></VBtn>
-        <h2 class="text-primary">{{ user.account }}</h2>
+        <h2 class="text-third">{{ user.account }}</h2>
       </VCol>
-      <VCol cols="6">
-          <VCard
-          >
+      <VCol cols="6" sm="12" >
+          <VCard>
           <!-- 帳號 密碼 名字 手機 -->
-            <VToolbar color="third" flat >
-              <VIcon class="ps-8" icon="mdi-account"></VIcon>
+            <VToolbar color="eigth" flat class="text-third">
+              <VIcon class="ps-8" icon="mdi-account" ></VIcon>
               <VToolbarTitle class="font-weight-bold">個人資料</VToolbarTitle>
               <VSpacer></VSpacer>
               <VBtn icon>
@@ -62,6 +61,7 @@
                     <VTextField
                     lable="帳號"
                     variant="outlined"
+                    density="comfortable"
                     v-model="account.value.value"
                     :error-messages="account.errorMessage.value"
                     ></VTextField>
@@ -70,6 +70,7 @@
                     <VTextField
                     lable="姓名"
                     variant="outlined"
+                    density="comfortable"
                     v-model="name.value.value"
                     :error-messages="name.errorMessage.value"
                     ></VTextField>
@@ -78,6 +79,7 @@
                     <VTextField
                     lable="電話"
                     variant="outlined"
+                    density="comfortable"
                     v-model="phone.value.value"
                     :error-messages="phone.errorMessage.value"
                     ></VTextField>
@@ -357,8 +359,4 @@ const editAvatar = async () => {
 
 </script>
 
-<style scoped>
-.third{
-  color:#F9C80E;
-}
-</style>
+
