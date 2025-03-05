@@ -88,7 +88,7 @@
               </VCardText>
               <VCardActions>
                 <VBtn
-                  color="forth" size="x-large"
+                  color="third" size="x-large"
                   class="font-weight-bold d-flex w-100"  variant="tonal"
                   type="submit"
                   :loading="isSubmitting"
