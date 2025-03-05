@@ -222,8 +222,6 @@ const cancel = () => {
 const submit = handleSubmit(async (values) => {
   try {
     await apiAuth.patch('/users/self', values) // values 是表單的資料
-    console.log(values)
-
     // 更新 user store 的資料
     user.getProfile()
 
