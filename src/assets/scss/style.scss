@@ -5,13 +5,13 @@ body {
     color: #F9C80E;
   }
 
-  .text-third {
-    color: var(--v-theme-third) !important; /* 使用 Vuetify 主題中的自訂白色 */
-  }
+  // .text-third {
+  //   color: var(--v-theme-third) !important; /* 使用 Vuetify 主題中的自訂顏色 */
+  // }
   
-  .text-forth{
-    color: var(--v-theme-forth) !important; /* 使用 Vuetify 主題中的自訂白色 */
-  }
+  // .text-forth{
+  //   color: var(--v-theme-forth) !important; /* 使用 Vuetify 主題中的自訂顏色 */
+  // }
 
   .overflow-hidden{
     overflow: hidden;

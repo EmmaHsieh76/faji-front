@@ -7,12 +7,12 @@
         <VBtn icon="mdi-pencil" size="x-small" color="third" style="vertical-align: bottom;"
         @click="openDialog"
         ></VBtn>
-        <h2 class="text-third">{{ user.account }}</h2>
+        <h2 class="third">{{ user.account }}</h2>
       </VCol>
       <VCol cols="6" sm="12" >
           <VCard>
           <!-- 帳號 密碼 名字 手機 -->
-            <VToolbar color="eigth" flat class="text-third">
+            <VToolbar color="eigth" flat class="third">
               <VIcon class="ps-8" icon="mdi-account" ></VIcon>
               <VToolbarTitle class="font-weight-bold">個人資料</VToolbarTitle>
               <VSpacer></VSpacer>
