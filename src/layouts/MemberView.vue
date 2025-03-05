@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row class="mt-5">
-      <v-col cols="4" sm="12" class="d-flex justify-center">
+      <v-col cols="4" xs="12" class="d-flex justify-center">
         <v-card
           min-width="200"
         >
@@ -23,7 +23,7 @@
           </v-list>
         </v-card>
       </v-col>
-      <v-col cols="8" sm="12">
+      <v-col cols="8" xs="12">
           <router-view :key="$route.path" ></router-view>
       </v-col>
   </v-row>
