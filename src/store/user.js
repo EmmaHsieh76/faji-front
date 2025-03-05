@@ -13,6 +13,7 @@ export const useUserStore = defineStore('user', () => {
   const cart = ref(0)
   const name = ref('')
   const phone = ref('')
+  const avatar = ref('')
   const blacklist = ref(false)
   const blacklistReason = ref('')
   const role = ref(UserRole.USER)
@@ -28,6 +29,7 @@ export const useUserStore = defineStore('user', () => {
     cart.value = data.cart
     name.value = data.name
     phone.value = data.phone
+    avatar.value = data.avatar
     blacklist.value = data.blacklist
     blacklistReason.value = data.blacklistReason
     role.value = data.role
@@ -62,6 +64,7 @@ export const useUserStore = defineStore('user', () => {
     cart.value = 0
     name.value = ''
     phone.value = ''
+    avatar.value = ''
     blacklist.value = false
     blacklistReason.value = ''
     role.value = UserRole.USER
@@ -74,6 +77,7 @@ export const useUserStore = defineStore('user', () => {
     cart,
     name,
     phone,
+    avatar,
     blacklist,
     blacklistReason,
     role,
