@@ -4,7 +4,7 @@
       <VCol cols="12" class="text-center" sm="12" md="6" lg="6" >
         <VAvatar :image="user.avatar" size="260"
         ></VAvatar>
-        <VBtn icon="mdi-pencil" size="x-small" color="third" style="vertical-align: bottom;"
+        <VBtn icon="mdi-pencil" size="x-small" color="third" style="vertical-align: bottom"  variant="tonal"
         @click="openDialog"
         ></VBtn>
         <h2 class="third">{{ user.account }}</h2>
@@ -18,8 +18,8 @@
               <VSpacer></VSpacer>
               <VBtn icon>
                 <VFadeTransition leave-absolute>
-                  <VIcon v-if="isEditing" @click="cancel" icon="mdi-close"></VIcon>
-                  <VIcon v-else icon="mdi-pencil" @click="isEditing = true"></VIcon> 
+                  <VIcon v-if="isEditing" @click="cancel" icon="mdi-close"  variant="tonal"></VIcon>
+                  <VIcon v-else icon="mdi-pencil" @click="isEditing = true"  variant="tonal"></VIcon> 
                 </VFadeTransition>
                 
               </VBtn>
