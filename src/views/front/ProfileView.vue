@@ -11,19 +11,20 @@
       </VCol>
       <VCol cols="6">
           <VCard
-            class="mx-auto"
-            max-width="344"
           >
           <!-- 帳號 密碼 名字 手機 -->
-            <VCardTitle class="third font-weight-bold text-center" >
+            <VToolbar color="third" flat >
               <VIcon class="ps-8" icon="mdi-account"></VIcon>
-              個人資料
+              <VToolbarTitle class="font-weight-bold">個人資料</VToolbarTitle>
               <VSpacer></VSpacer>
-              <VBtn>
-                <VIcon v-if="isEditing" @click="isEditing" icon="mdi-pencil"></VIcon>
-                <VIcon v-else icon="mdi-close" @click="cancel"></VIcon>
+              <VBtn icon>
+                <VFadeTransition leave-absolute>
+                  <VIcon v-if="isEditing" @click="cancel" icon="mdi-close"></VIcon>
+                  <VIcon v-else icon="mdi-pencil" @click="isEditing = true"></VIcon> 
+                </VFadeTransition>
+                
               </VBtn>
-            </VCardTitle>
+            </VToolbar>
             <VForm @submit.prevent="submit" :disable="isSubmitting || !isEditing">
               <!-- <VContainer>
                 <h4>帳號</h4>

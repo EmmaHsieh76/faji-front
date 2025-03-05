@@ -26,6 +26,13 @@
                 @click:append-inner="tableApplySearch" @keydown.enter="tableApplySearch">
               </VTextField>
             </template>
+              <!-- === 指定 avatar 欄位的顯示方式 -->
+          <!-- [`item.key`]，插槽後面= 可以帶出它的資料，這裡解構出 key item -->
+            <template #[`item.avatar`]="{ item }">
+              <VAvatar size="30">
+                <VImg :src="item.avatar" contain></VImg>
+              </VAvatar>
+            </template>`
             <!-- === 指定 role 欄位的顯示方式 -->
             <template #[`item.role`]="{ item }">
               <VIcon icon="mdi-check" v-if="item.role === 1 " color="sixth"></VIcon>
@@ -295,10 +302,8 @@ const tableUsers = ref([])
 // === 表格欄位設定
 // key 是後端回傳的資料 key，用 v-for 自動產生表格
 const tableHeaders = [
-  // { title: '大頭貼', align: 'center', sortable: false, key: 'avatar' },
+  { title: '大頭貼', align: 'center', sortable: false, key: 'avatar' },
   { title: '帳號', align: 'center', sortable: true, key: 'account' },
-  // { title: '信箱', align: 'center', sortable: true, key: 'email' },
-  // { title: '密碼', align: 'center', sortable: true, key: 'password' },
   { title: '管理員', align: 'center', sortable: true, key: 'role' },
   { title: '狀態', align: 'center', sortable: true, key: 'blacklist' },
   { title: '異常原因', align: 'center', sortable: true, key: 'blacklistReason' },
