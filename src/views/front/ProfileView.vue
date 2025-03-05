@@ -1,7 +1,7 @@
 <template>
   <VContainer>
-    <VRow>
-      <VCol cols="12" class="text-center" sm="12" >
+    <VRow class="justify-center pt-10">
+      <VCol cols="12" class="text-center" sm="12" md="6" lg="6" >
         <VAvatar :image="user.avatar" size="260"
         ></VAvatar>
         <VBtn icon="mdi-pencil" size="x-small" color="third" style="vertical-align: bottom;"
@@ -9,7 +9,7 @@
         ></VBtn>
         <h2 class="third">{{ user.account }}</h2>
       </VCol>
-      <VCol cols="12" sm="12" md="6" >
+      <VCol cols="12" sm="12" md="6" lg="6" >
           <VCard class="bg-eigth">
           <!-- 帳號 密碼 名字 手機 -->
             <VToolbar color="third" flat >

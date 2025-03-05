@@ -23,7 +23,7 @@
           </v-list>
         </v-card>
       </v-col>
-      <v-col cols="9">
+      <v-col cols="8">
           <router-view :key="$route.path" ></router-view>
       </v-col>
   </v-row>
