@@ -29,7 +29,7 @@ const navItems = [
 ]
 
 const prependAvatar = computed(() => {
-  return `https://source.boringavatars.com/beam/120/${user.account}?colors=565175,538A95,67B79E,FFB727,E4491C`
+  return `https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=${user.account}`
 })
 </script>
 <!-- E67B21,31312D,D92323,F9C80E,244080 -->

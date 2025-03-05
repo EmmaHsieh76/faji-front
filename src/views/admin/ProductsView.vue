@@ -123,7 +123,7 @@
       placeholder="商品說明"
       variant="outlined"
       v-model="description.value.value"
-      class="py-5"
+      class="py-10"
       :error-messages="description.errorMessage.value"
       ></v-textarea>
       <VueFileAgent
