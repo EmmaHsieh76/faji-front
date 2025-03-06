@@ -24,36 +24,6 @@
               </VBtn>
             </VToolbar>
             <VForm @submit.prevent="submit" :disabled=" !isEditing || isSubmitting">
-              <!-- <VContainer>
-                <h4>帳號</h4>
-                <h4 color="forth" class="pb-3 mt-2">{{ account }}</h4>
-                <VDivider></VDivider>
-                <h4 class="mt-4">名字</h4>
-                <VTextField
-                  v-model="name"
-                  color="forth"
-                  variant="underlined"
-                  clearable
-                  placeholder="輸入您的名字"
-                  :rules="[rules.required]"
-                ></VTextField>
-                <h4 class="mt-2">電話</h4>
-                <VTextField
-                  v-model="phone"
-                  color="forth"
-                  placeholder="輸入您的手機號碼"
-                  variant="underlined"
-                  clearable
-                  :rules="[rules.required]"
-                ></VTextField>
-
-                <VBtn color="forth" size="x-large" class="font-weight-bold d-flex w-100"  variant="tonal"
-                type="submit"
-                @click="submit"
-                >
-                確認修改個人資料
-                </VBtn>
-              </VContainer> -->
               <VCardText class="pa-10">
                 <VRow>
                   <VCol cols="12" class=pb-0 >
@@ -95,13 +65,6 @@
                 >
                   確認修改個人資料
                 </VBtn>
-                <!-- <VBtn
-                  color="error"
-                  @click="cancel"
-                  :disabled="isSubmitting"
-                >
-                  取消
-                </VBtn> -->
               </VCardActions>
             </VForm>
           </VCard>
