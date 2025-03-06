@@ -11,7 +11,6 @@
       </VCol>
       <VCol cols="12" md="6" lg="6" >
           <VCard class="bg-eigth">
-          <!-- 帳號 密碼 名字 手機 -->
             <VToolbar color="third" flat >
               <VIcon class="ps-8" icon="mdi-account" ></VIcon>
               <VToolbarTitle class="font-weight-bold">個人資料</VToolbarTitle>
