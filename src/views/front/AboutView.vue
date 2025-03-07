@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row  class="mt-5">
-      <v-col cols="12" md="3" class="d-flex justify-center">
+      <v-col cols="12" md="3" class="justify-center d-flex">
         <v-card
           min-width="250"
         >
@@ -13,6 +13,7 @@
               :key="i"
               :value="item"
               color="third"
+              :class="{'v-list-item--active': selectedItem === item.text}"
               rounded="xl"
               hover
             >
@@ -21,7 +22,8 @@
           </v-list>
         </v-card>
       </v-col>
-      <v-col cols="12" md="9" v-if="selectedItem === '品牌故事'">
+      <v-col cols="12" md="9" v-if="selectedItem === '品牌故事'"
+      >
             <h2 class="text-center third">發記故事</h2>
             <v-divider class="mb-3"></v-divider>
             <v-img
@@ -29,13 +31,15 @@
             height="auto"
             src="@/assets/story.jpg"
             contain
+            class="mx-auto"
             rounded="lg"
             ></v-img>
             <div class="mt-10">
              <p v-for="(story, i) in storys" :key="i">{{ story }}</p>
             </div>
       </v-col>
-      <v-col cols="12" md="9" v-else-if="selectedItem === '媒體報導'">
+      <v-col cols="12" md="9" class="justify-center d-flex"
+      v-else-if="selectedItem === '媒體報導'">
           <h2 class="text-center third">媒體報導</h2>
           <v-divider class="mb-3"></v-divider>
           <v-row>
@@ -51,7 +55,7 @@
             </v-col>
           </v-row>
       </v-col>
-      <v-col cols="12" md="9" v-else-if="selectedItem === '安心證書'">
+      <v-col cols="12" md="9" class="justify-center d-flex" v-else-if="selectedItem === '安心證書'">
         <h2 class="text-center third">合格證書</h2>
         <v-divider class="mb-3"></v-divider>
         <v-row>
