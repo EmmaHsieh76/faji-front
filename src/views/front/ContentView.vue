@@ -2,16 +2,15 @@
 <VContainer>
   <VRow class="mt-7">
     <VCol cols="12" md="6" class="d-flex justify-center align-center">
-    <v-img
-    :width="500"
-    :height="500"
-    aspect-ratio="1/1"
-    cover
-    src="@/assets/contentUs.png"
-    position="left top"
-    rounded="lg"
-    >
-    </v-img>
+      <VImg
+      max-width="100%"
+      height="auto"
+      contain
+      src="@/assets/contentUs.png"
+      position="left top"
+      rounded="lg"
+      >
+      </VImg>
     </VCol>
     <VCol cols="12" md="6">
         <h1 class="seventh">發記粉粿冰</h1>
@@ -32,7 +31,7 @@
         </p>
     </VCol>
     <VCol cols="12">
-      <VCard max-width="80vw">
+      <VCard>
         <VCardTitle class="ninth">
           <VIcon class="seventh">mdi-map-marker</VIcon>&nbsp;
           交通方式
