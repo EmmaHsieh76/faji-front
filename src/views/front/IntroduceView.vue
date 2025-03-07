@@ -7,8 +7,8 @@
       >
         <v-img
         class="left"
-        width="auto"
-        height="225"
+        max-width="100%"
+        height="auto"
         aspect-ratio="1/1"
         cover
         :src="item.image"
@@ -104,7 +104,12 @@ onMounted(() => {
       opacity: 0,
       duration: 1,
       ease: 'ease-in',
-      stagger: 0.5
+      stagger: 0.5,
+      scrollTrigger: {
+      trigger: '.left',
+      start: 'top 80%',
+      toggleActions: 'play none none none'
+    }
     })
   gsap
     .from('.right', {
@@ -112,7 +117,12 @@ onMounted(() => {
       opacity: 0,
       duration: 1,
       ease: 'ease-in',
-      stagger: 0.5
+      stagger: 0.5,
+      scrollTrigger: {
+      trigger: '.right',
+      start: 'top 80%',
+      toggleActions: 'play none none none'
+    }
     })
 })
 

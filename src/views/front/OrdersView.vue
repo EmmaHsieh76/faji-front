@@ -55,7 +55,6 @@ onMounted(async () => {
     const { data } = await apiAuth.get('/orders')
     orders.value.push(...data.result)
   } catch (error) {
-    console.log('前端哪兒有錯',error)
     const text = error?.response?.data?.message || '發生錯誤，請稍後再試'
     createSnackbar({
       text,

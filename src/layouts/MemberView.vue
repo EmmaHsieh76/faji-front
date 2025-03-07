@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-row class="mt-5">
-      <v-col cols="4" sm="12" md="3" lg="4" class="d-flex justify-center">
+      <v-col cols="12" md="3" class="d-flex justify-center">
         <v-card
-          min-width="200"
+          min-width="250"
         >
           <v-list>
             <v-list-subheader class="font-weight-bold">會員中心</v-list-subheader>
@@ -23,7 +23,7 @@
           </v-list>
         </v-card>
       </v-col>
-      <v-col cols="8" sm="12" md="9" lg="8">
+      <v-col cols="12" md="9" >
           <router-view :key="$route.path" ></router-view>
       </v-col>
   </v-row>

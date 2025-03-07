@@ -1,7 +1,7 @@
 <template>
 <VContainer>
   <VRow class="mt-7">
-    <VCol cols="12" md="6" class="d-flex justify-center align-center">
+    <VCol cols="12" md="8" lg="6" class="d-flex justify-center align-center">
       <VImg
       max-width="100%"
       height="auto"
@@ -12,7 +12,7 @@
       >
       </VImg>
     </VCol>
-    <VCol cols="12" md="6">
+    <VCol cols="12" md="4" lg="6">
         <h1 class="seventh">發記粉粿冰</h1>
         <VDivider></VDivider>
         <br>
