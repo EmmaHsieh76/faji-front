@@ -1,6 +1,6 @@
 <template>
-  <v-container class="mt-1">
-    <v-row >
+  <v-container>
+    <v-row  class="mt-5">
       <v-col cols="12" md="3" class="d-flex justify-center">
         <v-card
           min-width="250"
@@ -25,7 +25,7 @@
             <h2 class="text-center third">發記故事</h2>
             <v-divider class="mb-3"></v-divider>
             <v-img
-            max-width="100%"
+            max-width="645"
             height="auto"
             src="@/assets/story.jpg"
             contain
@@ -39,10 +39,12 @@
           <h2 class="text-center third">媒體報導</h2>
           <v-divider class="mb-3"></v-divider>
           <v-row>
-            <v-col cols="6" v-for="(item, i) in introduce" :key="i">
-              <v-card>
+            <v-col cols="12" lg="6" v-for="(item, i) in introduce" :key="i">
+              <v-card
+              max-width="410"
+              >
               <v-card-title>
-                感謝&nbsp;<h2>{{item.title}}</h2>&nbsp;推薦
+                感謝&nbsp;<h3 style="display: inline;">{{item.title}}</h3>
               </v-card-title>
               <iframe  width="100%" height="300" :src="item.url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </v-card>
@@ -61,7 +63,7 @@
               <v-img
               width="100%"
               :src="item.url"
-              cover
+              contain
               ></v-img>
               <v-card-title>安心證書</v-card-title>
               <v-card-text>
@@ -127,12 +129,12 @@ const storys = [
 
 const certificate = [
   {
-    url: '@/assets/safe1.jpg',
+    url:  new URL('@/assets/safe1.jpg', import.meta.url).href,
     text:'本店已通過HACCP食品安全管理系統認證，確保產品的安全與品質。'
-
+    
   },
   {
-    url: '@/assets/safe2.jpg',
+    url:  new URL('@/assets/safe2.jpg', import.meta.url).href,
     text:'本店已通過TQF台灣食品優良驗證方案檢驗認證，確保產品的安全與品質。'
   }
 ]

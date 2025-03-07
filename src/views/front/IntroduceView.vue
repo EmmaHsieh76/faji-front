@@ -1,7 +1,7 @@
 <template>
-  <v-container>
+  <v-container class="mt-5">
     <v-row
-    v-for="(item, i) in items" :key="i" class="mb-5 mx-auto"
+    v-for="(item, i) in items" :key="i" class="mb-5 mx-auto" 
       >
       <v-col cols="12" md="4"
       >
