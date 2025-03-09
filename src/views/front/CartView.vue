@@ -10,7 +10,7 @@
     <v-data-table
     :items="cart"
     :headers="headers"
-    class="mb-5"
+    class="mb-5 d-flex justify-center align-center"
     >
       <template #[`item.product.images[0]`]="{ item }">
         <RouterLink :to="'/products/'+ item.product._id">
@@ -20,14 +20,15 @@
           :height="100"
           aspect-ratio="1/1"
           cover
-          rounded="md"
-        ></v-img>
+          rounded="lg"
+          ></v-img>
         </RouterLink>
       </template>
       <template #[`item.product.name`]="{item}">
         <span v-if="item.product.sell">{{item.product.name}}</span>
         <span class="text-red text-decoration-line-through" v-else>{{item.product.name}}(已下架)</span>
       </template>
+      <template #[`item.product.price`]="{item}">${{ item.product.price }}</template>
       <template #[`item.quantity`]="{item}">
         <v-btn
         variant="text" icon="mdi-minus" color="seventh" @click="addCart(item.product._id, -1)"
@@ -37,6 +38,9 @@
         variant="text" icon="mdi-plus" color="third" @click="addCart(item.product._id, 1)"
         >
         </v-btn>
+      </template>
+      <template #[`item.total`]="{item}">
+        ${{ item.product.price * item.quantity }}
       </template>
       <template #[`item.action`]="{ item }">
         <v-btn variant="text" icon="mdi-delete" color="seventh" @click="addCart(item.product._id, item.quantity * -1)"></v-btn>
@@ -48,7 +52,7 @@
     <p><strong class="text-red text-h4">NT.{{total}}</strong></p>
   </v-col>
   <v-col cols="12">
-    <v-sheet height="100%" width="100%"  border rounded color="grey-lighten-5 py-3 text-center" style="">
+    <v-sheet height="100%" width="100%" rounded color="grey-lighten-5 py-3 text-center">
       <h4 class="ps-2 text-h5 font-weight-bold">【取貨人資料】</h4>
     </v-sheet>
   </v-col>
