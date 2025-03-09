@@ -12,7 +12,7 @@
     :headers="headers"
     >
       <template #[`item.product.images[0]`]="{ item }">
-        <RouterLink :to="'/products/'+ item.product._id">
+        <RouterLink :to="'/products/'+ item.product._id" class="d-flex justify-center align-center">
           <v-img
           :src="item.product.images[0]"
           :width="100"
@@ -20,7 +20,7 @@
           aspect-ratio="1/1"
           cover
           rounded="lg"
-          class="mb-5"
+          class="my-3"
           ></v-img>
         </RouterLink>
       </template>

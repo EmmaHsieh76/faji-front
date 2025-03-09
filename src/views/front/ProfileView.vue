@@ -228,6 +228,7 @@ const editAvatar = async () => {
 
     // === 如果有選擇圖片，就放進 FormData
     if (fileRecords.value.length > 0) {
+      console.log(fileRecords.value.file)
       fd.append('image', fileRecords.value[0].file)
     }
 

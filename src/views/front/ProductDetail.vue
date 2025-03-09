@@ -18,7 +18,7 @@
               aspect-ratio="1/1"
               cover
               rounded="lg"
-              class="mb-5"
+              class="mb-5 mx-5"
               :src="mainImage"
               ></v-img>
             </td>
