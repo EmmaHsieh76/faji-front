@@ -10,7 +10,7 @@
     <v-data-table
     :items="cart"
     :headers="headers"
-    class="mb-5 d-flex justify-center align-center"
+    class="mb-5"
     >
       <template #[`item.product.images[0]`]="{ item }">
         <RouterLink :to="'/products/'+ item.product._id">

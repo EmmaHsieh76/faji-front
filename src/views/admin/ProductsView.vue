@@ -294,7 +294,14 @@ const submit = handleSubmit(async (values) => {
     // 重新載入表格資料
     tableApplySearch()
   } catch (error) {
-    console.log(error)
+    console.error("發生錯誤:", error);
+    if (error.response) {
+      console.error("錯誤回應資料:", error.response.data);
+    } else if (error.request) {
+      console.error("請求未收到回應:", error.request);
+    } else {
+      console.error("錯誤訊息:", error.message);
+    }
     const text = error?.response?.data?.message || '發生錯誤，請稍後再試'
     createSnackbar({
       text,
