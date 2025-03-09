@@ -17,43 +17,24 @@
               :height="350"
               aspect-ratio="1/1"
               cover
+              rounded="lg"
+              class="mb-5"
               :src="mainImage"
               ></v-img>
             </td>
           </tr>
-          <tr><br></tr>
-          <tr class="d-flex justify-center">
-            <td>
+          <tr class="d-flex justify-center ma-2 pa-2">
+            <td v-for="(pic,i) in product.images" :key="i">
               <v-img
-            :width="70"
-            :height="70"
-            cover
-            class="ma-2 pa-2"
-            :src="product.images[0]"
-            @click="changeMainImage(product.images[0])"
-            ></v-img>
+              :width="70"
+              :height="70"
+              cover
+              rounded="lg"
+              :src="pic"
+              @click="changeMainImage(pic)"
+              ></v-img>
             </td>
-            <td>
-              <v-img
-            :width="70"
-            :height="70"
-            cover
-            class="ma-2 pa-2"
-            :src="product.images[1]"
-            @click="changeMainImage(product.images[1])"
-            ></v-img>
-            </td>
-            <td>
-              <v-img
-            :width="70"
-            :height="70"
-            cover
-            class="ma-2 pa-2"
-            :src="product.images[2]"
-            @click="changeMainImage(product.images[2])"
-            ></v-img>
-            </td>
-          </tr>
+          </tr>  
         </v-table>
       </v-col>
       <v-col cols="12" md="6">

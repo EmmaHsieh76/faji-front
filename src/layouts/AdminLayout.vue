@@ -1,7 +1,7 @@
 <template>
 <v-navigation-drawer permanent>
   <v-list>
-    <v-list-item :prepend-avatar="prependAvatar" :title="user.account">
+    <v-list-item :prepend-avatar="user.avatar" :title="user.account">
     </v-list-item>
   </v-list>
   <v-divider></v-divider>
@@ -28,9 +28,7 @@ const navItems = [
   { to: '/', text: '回首頁', icon: 'mdi-home' }
 ]
 
-const prependAvatar = computed(() => {
-  return `https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=${user.account}`
-})
+
 </script>
 <style scoped>
 .about-view {

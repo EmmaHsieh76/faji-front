@@ -10,7 +10,6 @@
     <v-data-table
     :items="cart"
     :headers="headers"
-    class="mb-5"
     >
       <template #[`item.product.images[0]`]="{ item }">
         <RouterLink :to="'/products/'+ item.product._id">
@@ -21,6 +20,7 @@
           aspect-ratio="1/1"
           cover
           rounded="lg"
+          class="mb-5"
           ></v-img>
         </RouterLink>
       </template>
@@ -169,12 +169,12 @@ const rules = ref({
 })
 const cart = ref([])
 const headers = [
-  { title: '圖片', key: 'product.images[0]' },
-  { title: '名稱', key: 'product.name' },
-  { title: '單價', key: 'product.price' },
-  { title: '數量', key: 'quantity' },
-  { title: '總價', key: 'total', value: item => item.product.price * item.quantity },
-  { title: '刪除', key: 'action' }
+  { title: '圖片', key: 'product.images[0]', align: 'center' },
+  { title: '名稱', key: 'product.name', align: 'center' },
+  { title: '單價', key: 'product.price', align: 'center' },
+  { title: '數量', key: 'quantity', align: 'center' },
+  { title: '總價', key: 'total', value: item => item.product.price * item.quantity, align: 'center' },
+  { title: '刪除', key: 'action', align: 'center' }
 ]
 
 const total = computed(() => {
