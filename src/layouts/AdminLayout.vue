@@ -32,9 +32,6 @@ const prependAvatar = computed(() => {
   return `https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=${user.account}`
 })
 </script>
-<!-- E67B21,31312D,D92323,F9C80E,244080 -->
-<!-- FCF7D7,FEA667,FFE461,C6DE86,F4D092 -->
-<!-- 565175,538A95,67B79E,FFB727,E4491C -->
 <style scoped>
 .about-view {
   text-align: center;

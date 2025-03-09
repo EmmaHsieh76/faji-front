@@ -32,7 +32,7 @@
               <VAvatar size="30">
                 <VImg :src="item.avatar" contain></VImg>
               </VAvatar>
-            </template>`
+            </template>
             <!-- === 指定 role 欄位的顯示方式 -->
             <template #[`item.role`]="{ item }">
               <VIcon icon="mdi-check" v-if="item.role === 1 " color="sixth"></VIcon>
@@ -190,7 +190,6 @@ const { handleSubmit, isSubmitting, resetForm } = useForm({ // handleSubmit 表�
   // --- 初始值設定
   initialValues: {
     account: '',
-    // email: 0,
     role: 0,
     blacklist: false,
     blacklistReason: ''

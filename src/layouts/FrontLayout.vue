@@ -123,7 +123,7 @@ const navItems = computed(() => {
     { to: '/cart', text: '我的購物車', show: user.isLogin && !user.isAdmin },
     // show: !user.isLogin => 使用者沒有登入時顯示
     { to: '/signup', text: '會員專區', show: !user.isLogin },
-    { to: '/member', text: '會員專區', show: user.isLogin && !user.isAdmin },
+    { to: '/member', text: '會員專區', show: user.isLogin },
     { to: '/admin', text: '管理', show: user.isLogin && user.isAdmin }
   ]
 })
