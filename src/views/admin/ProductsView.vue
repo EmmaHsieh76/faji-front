@@ -53,7 +53,15 @@
           </v-row>
         </template>
         <template #[`item.image`]="{item}">
-          <v-img :src="item.images[0]" height="13vh"></v-img>
+          <v-img 
+          :src="item.images[0]" 
+          max-height="100"
+          max-width="100"
+          aspect-ratio="1/1"
+          cover
+          rounded="lg"
+          class="my-3"
+          ></v-img>
         </template>
         <template #[`item.sell`]="{item}">
           <v-icon color="sixth" :icon="item.sell ? 'mdi-check':'mdi-minus'"

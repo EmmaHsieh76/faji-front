@@ -33,13 +33,14 @@
 <script setup>
 
 import { computed } from 'vue'
+import { useUserStore } from '@/store/user'
 // import { useRouter } from 'vue-router'
 
 // const router = useRouter()
-
+const user = useUserStore()
 const items = computed(() => {
   return [
-    { text: '訂單管理', to: '/member' },
+    { text: '訂單管理', to: '/member', show: !user.isAdmin },
     { text: '修改個人資料', to: '/member/profile' }
   ]
 })
