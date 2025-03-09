@@ -27,7 +27,7 @@
             <h2 class="text-center third">發記故事</h2>
             <v-divider class="mb-3"></v-divider>
             <v-img
-            max-width="645"
+            max-width="645px"
             height="auto"
             src="@/assets/story.jpg"
             contain
@@ -38,34 +38,36 @@
              <p v-for="(story, i) in storys" :key="i">{{ story }}</p>
             </div>
       </v-col>
-      <v-col cols="12" md="9" class="justify-center d-flex"
+      <v-col cols="12" md="9" 
       v-else-if="selectedItem === '媒體報導'">
           <h2 class="text-center third">媒體報導</h2>
           <v-divider class="mb-3"></v-divider>
           <v-row>
-            <v-col cols="12" lg="6" v-for="(item, i) in introduce" :key="i">
+            <v-col cols="12" md="6" v-for="(item, i) in introduce" :key="i">
               <v-card
-              max-width="410"
+              max-width="70%"
+              class="mx-auto"
               >
               <v-card-title>
-                感謝&nbsp;<h3 style="display: inline;">{{item.title}}</h3>
+                感謝&nbsp;<h3 style="display: inline;">{{item.title}}&nbsp;來訪</h3>
               </v-card-title>
               <iframe  width="100%" height="300" :src="item.url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </v-card>
             </v-col>
           </v-row>
       </v-col>
-      <v-col cols="12" md="9" class="justify-center d-flex" v-else-if="selectedItem === '安心證書'">
+      <v-col cols="12" md="9" v-else-if="selectedItem === '安心證書'">
         <h2 class="text-center third">合格證書</h2>
         <v-divider class="mb-3"></v-divider>
         <v-row>
           <v-col cols="12" md="6" v-for="(item, i) in certificate" :key="i">
             <v-card
-            width="400"
-            height="700"
+            max-width="100%"
+            class="mx-auto"
             >
               <v-img
               width="100%"
+              height="400px"
               :src="item.url"
               contain
               ></v-img>

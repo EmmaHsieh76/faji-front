@@ -12,12 +12,16 @@
     :headers="headers"
     >
       <template #[`item.product.images[0]`]="{ item }">
-        <v-img
-        :src="item.product.images[0]"
-        :width="100"
-        :height="100"
-        aspect-ratio="1/1"
+        <RouterLink :to="'/product/'+ item.product._id">
+          <v-img
+          :src="item.product.images[0]"
+          :width="100"
+          :height="100"
+          aspect-ratio="1/1"
+          rounded="sm"
         ></v-img>
+        </RouterLink>
+        
       </template>
       <template #[`item.product.name`]="{item}">
         <span v-if="item.product.sell">{{item.product.name}}</span>

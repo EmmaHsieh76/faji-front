@@ -4,19 +4,19 @@
     :to="'/products/' + _id"
     class="text-decoration-none text-ninth"
     >
-    <div class="overflow-hidden">
-      <v-img
-        :src="images[0]"
-        cover
-        width="100%"
-        height="300"
-        class="img-enlarge"
-      >
-    </v-img>
-    </div>
-    <v-card-title class="font-weight-bold text-h5 my-0 py-1">
-      {{name}}
-    </v-card-title>
+      <div class="overflow-hidden">
+        <v-img
+          :src="images[0]"
+          cover
+          width="100%"
+          height="300"
+          class="img-enlarge"
+        >
+      </v-img>
+      </div>
+      <v-card-title class="font-weight-bold text-h5 my-0 py-1">
+        {{name}}
+      </v-card-title>
     </RouterLink>
     <p class="px-4 my-2">售價${{price}}</p>
     <!--  white-space:pre => 才能顯示後端文字說明的換行，不然字會在同一行-->

@@ -8,7 +8,7 @@
         <v-img
         class="left"
         max-width="100%"
-        height="auto"
+        max-height="300px"
         aspect-ratio="1/1"
         cover
         :src="item.image"
@@ -33,6 +33,13 @@ import gsap from 'gsap'
 
 const items = ref([
   {
+    image: new URL('@/assets/ice-3.jpg', import.meta.url).href,
+    text1: '粉粿冰',
+    text2: '精選新鮮地瓜粉，以水與精選地瓜粉調配的黃金比例，每日慢火攪拌，經過一晚的冷卻，使口感恰好的彈牙不過硬。',
+    text3: '運用梔子花提取的天然色素，再搭配古法熬煮的紅糖水，在陽光的淋浴下，綻放著迷人的繽紛色彩，讓每一口都是視覺和味覺的雙重享受。',
+    text4: '這不僅是一碗粉粿，而是承載著滿滿古早回憶，帶您進入時光隧道回到舊往時光，品味懷舊風情。'
+  },
+  {
     image: new URL('@/assets/ice-1.jpg', import.meta.url).href,
     text1: '鳳梨冰',
     text2: '以新鮮的鳳梨，經由手工削皮切片，保留了每一絲果肉的飽滿香氣。每一片鳳梨都是經過精心挑選，確保口感豐腴，為您帶來最天然、新鮮的水果風味。',
@@ -45,13 +52,6 @@ const items = ref([
     text2: '挑選上等在來米粉，經過精心煮製，經過流水冷卻，使口感Q彈不軟爛',
     text3: ' 米苔目的質地柔軟，容易被消化吸收，適合作為容易消化的食物，特別是對於一些消化不良的人群。',
     text4: '更讓人在炎炎夏日中感受到一陣清新，是味蕾和心靈的雙重享受。'
-  },
-  {
-    image: new URL('@/assets/ice-3.jpg', import.meta.url).href,
-    text1: '粉粿冰',
-    text2: '精選新鮮地瓜粉，以水與精選地瓜粉調配的黃金比例，每日慢火攪拌，經過一晚的冷卻，使口感恰好的彈牙不過硬。',
-    text3: '運用梔子花提取的天然色素，再搭配古法熬煮的紅糖水，在陽光的淋浴下，綻放著迷人的繽紛色彩，讓每一口都是視覺和味覺的雙重享受。',
-    text4: '這不僅是一碗粉粿，而是承載著滿滿古早回憶，帶您進入時光隧道回到舊往時光，品味懷舊風情。'
   },
   {
     image: new URL('@/assets/ice-4.jpg', import.meta.url).href,
