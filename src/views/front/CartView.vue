@@ -10,18 +10,19 @@
     <v-data-table
     :items="cart"
     :headers="headers"
+    class="mb-5"
     >
       <template #[`item.product.images[0]`]="{ item }">
-        <RouterLink :to="'/product/'+ item.product._id">
+        <RouterLink :to="'/products/'+ item.product._id">
           <v-img
           :src="item.product.images[0]"
           :width="100"
           :height="100"
           aspect-ratio="1/1"
-          rounded="sm"
+          cover
+          rounded="md"
         ></v-img>
         </RouterLink>
-        
       </template>
       <template #[`item.product.name`]="{item}">
         <span v-if="item.product.sell">{{item.product.name}}</span>

@@ -45,11 +45,11 @@
           <v-row>
             <v-col cols="12" md="6" v-for="(item, i) in introduce" :key="i">
               <v-card
-              max-width="70%"
+              max-width="100%"
               class="mx-auto"
               >
               <v-card-title>
-                感謝&nbsp;<h3 style="display: inline;">{{item.title}}&nbsp;來訪</h3>
+                感謝&nbsp;<h3 style="display: inline;">{{item.title}}</h3>&nbsp;來訪
               </v-card-title>
               <iframe  width="100%" height="300" :src="item.url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </v-card>
