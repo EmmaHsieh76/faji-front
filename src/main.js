@@ -20,4 +20,6 @@ const app = createApp(App);
 
 registerPlugins(app);
 
+app.config.devtools = true
+
 app.mount("#app");
