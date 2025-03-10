@@ -287,8 +287,6 @@ const submit = handleSubmit(async (values) => {
       await apiAuth.patch('/products/' + dialogId.value, fd)
     }
 
-    user.getProfile()
-    
     createSnackbar({
       // 如果現在是新增就顯示新增成功，否則顯示編輯成功
       text: dialogId.value === '' ? '新增成功' : '編輯成功',
