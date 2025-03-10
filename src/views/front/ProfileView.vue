@@ -236,9 +236,16 @@ const editAvatar = async () => {
     user.avatar = URL.createObjectURL(fileRecords.value[0].file) 
 
     const res = await apiAuth.patch('/users/avatar', fd)
+
+    // 確保 token 沒有丟失
+    if (res.data.token) {
+      localStorage.setItem("token", res.data.token) // 存入 localStorage
+      user.token = res.data.token // 更新 store
+    }
+
     
     // 更新 user store 的 avatar
-    user.getProfile()
+    // user.getProfile()
 
 
     createSnackbar({
