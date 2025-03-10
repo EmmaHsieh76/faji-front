@@ -55,8 +55,8 @@
         <template #[`item.image`]="{item}">
           <v-img 
           :src="item.images[0]" 
-          max-height="100"
-          max-width="100"
+          height="100"
+          width="100"
           aspect-ratio="1/1"
           cover
           rounded="lg"

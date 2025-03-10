@@ -40,7 +40,7 @@ import { useUserStore } from '@/store/user'
 const user = useUserStore()
 const items = computed(() => {
   return [
-    { text: '訂單管理', to: '/member', show: !user.isAdmin },
+    { text: '訂單管理', to: '/member'},
     { text: '修改個人資料', to: '/member/profile' }
   ]
 })

@@ -222,28 +222,28 @@ const editAvatar = async () => {
   avatarSubmiting.value = true
 
   // 如果 圖片上傳有錯誤，就不送出  // 沒上傳圖片就沒有 value[0]，value[0] 是 undefined，undefined 沒有 .error 所以要用 ?. 避免錯誤
-  if (fileRecords.value[0]?.error) return
+  if (fileRecords.value[0].error) return
   try {
     const fd = new FormData()
 
 
     // === 如果有選擇圖片，就放進 FormData
     if (fileRecords.value.length > 0) {
-      console.log(fileRecords.value)
       fd.append('image', fileRecords.value[0].file)
     }
 
     await apiAuth.patch('/users/avatar', fd)
 
+   
     // 更新 user store 的 avatar
-    user.getProfile()
+      user.getProfile()
 
     createSnackbar({
       text: '編輯成功',
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'third',
+        color: 'forth',
         location: 'bottom'
       }
     })

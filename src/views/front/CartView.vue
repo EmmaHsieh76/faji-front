@@ -15,8 +15,8 @@
         <RouterLink :to="'/products/'+ item.product._id" class="d-flex justify-center align-center">
           <v-img
           :src="item.product.images[0]"
-          max-width="200"
-          max-height="200"
+          width="200"
+          height="200"
           aspect-ratio="1/1"
           cover
           rounded="lg"
