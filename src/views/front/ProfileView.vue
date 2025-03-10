@@ -238,10 +238,8 @@ const editAvatar = async () => {
     const res = await apiAuth.patch('/users/avatar', fd)
     
     // 更新 user store 的 avatar
-    // user.getProfile()
+    user.getProfile()
 
-    // 直接更新 store 裡的 user，確保數據同步
-    user.value = res.data.result
 
     createSnackbar({
       text: '編輯成功',
