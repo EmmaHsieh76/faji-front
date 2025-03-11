@@ -137,7 +137,7 @@ const logout = async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'green',
+        color: 'forth',
         location: 'buttom'
       }
     })
@@ -150,7 +150,7 @@ const logout = async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'red',
+        color: 'seventh',
         location: 'buttom'
       }
     })

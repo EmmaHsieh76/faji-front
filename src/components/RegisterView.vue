@@ -146,7 +146,7 @@ const submit = handleSubmit(async (values) => {
       // snackbarProps => vuetify的snackbar屬性
       snackbarProps: {
         timeout: 2000,
-        color: 'green',
+        color: 'forth',
         location: 'bottom'
       }
     })
@@ -160,7 +160,7 @@ const submit = handleSubmit(async (values) => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'red',
+        color: 'seventh',
         location: 'bottom'
       }
     })

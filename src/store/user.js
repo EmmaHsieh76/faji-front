@@ -51,8 +51,10 @@ export const useUserStore = defineStore('user', () => {
     try {
       // '/users/me'是後端的routes/users.js裡面的router.get('/me', auth.jwt, getProfile)
       const { data } = await apiAuth.get('/users/me')
+      console.log(data)
       login(data.result)
     } catch (error) {
+      console.log(error)
       logout()
     }
   }

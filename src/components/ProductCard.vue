@@ -78,7 +78,7 @@ const addCart = async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'green',
+        color: 'forth',
         location: 'bottom'
       }
     })
@@ -89,7 +89,7 @@ const addCart = async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'red',
+        color: 'seventh',
         location: 'bottom'
       }
     })
@@ -122,7 +122,7 @@ const submit = handleSubmit(async (values) => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 1000,
-        color: 'red',
+        color: 'seventh',
         location: 'top'
       }
     })
@@ -135,7 +135,7 @@ const submit = handleSubmit(async (values) => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 1000,
-        color: 'red',
+        color: 'seventh',
         location: 'top'
       }
     })
@@ -152,7 +152,7 @@ const submit = handleSubmit(async (values) => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'green',
+        color: 'forth',
         location: 'bottom'
       }
     })
@@ -163,7 +163,7 @@ const submit = handleSubmit(async (values) => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'red',
+        color: 'seventh',
         location: 'bottom'
       }
     })
@@ -187,7 +187,7 @@ onMounted(async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'red',
+        color: 'seventh',
         location: 'bottom'
       }
     })

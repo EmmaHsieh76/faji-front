@@ -216,7 +216,7 @@ const remove = async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'green',
+        color: 'forth',
         location: 'bottom'
       }
     })
@@ -230,7 +230,7 @@ const remove = async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'secondary',
+        color: 'seventh',
         location: 'bottom'
       }
     })
@@ -265,7 +265,7 @@ const submit = handleSubmit(async (values) => { // values 是表單各個欄位�
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'green',
+        color: 'forth',
         location: 'bottom'
       }
     })
@@ -280,7 +280,7 @@ const submit = handleSubmit(async (values) => { // values 是表單各個欄位�
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'red',
+        color: 'seventh',
         location: 'bottom'
       }
     })
@@ -343,7 +343,7 @@ const tableLoadItems = async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'secondary',
+        color: 'seventh',
         location: 'bottom'
       }
     })

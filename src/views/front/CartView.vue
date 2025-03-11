@@ -203,7 +203,7 @@ const addCart = async (product, quantity) => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'green',
+        color: 'forth',
         location: 'bottom'
       }
     })
@@ -219,7 +219,7 @@ const addCart = async (product, quantity) => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'red',
+        color: 'seventh',
         location: 'bottom'
       }
     })
@@ -244,7 +244,7 @@ const checkout = async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'green',
+        color: 'forth',
         location: 'bottom'
       }
     })
@@ -257,7 +257,7 @@ const checkout = async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'red',
+        color: 'seventh',
         location: 'bottom'
       }
     })
@@ -276,7 +276,7 @@ onMounted(async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'red',
+        color: 'seventh',
         location: 'bottom'
       }
     })
