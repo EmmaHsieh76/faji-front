@@ -332,7 +332,7 @@ const remove = async () => {
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
-        color: 'green',
+        color: 'forth',
         location: 'bottom'
       }
     })
