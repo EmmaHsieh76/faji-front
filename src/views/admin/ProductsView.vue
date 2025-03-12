@@ -52,7 +52,7 @@
             </v-col>
           </v-row>
         </template>
-        <template #[`item.image`]="{item}">
+        <template #[`item.image`]="{item}" class="d-flex justify-center align-center">
           <v-img 
           :src="item.images[0]" 
           height="100"
@@ -400,7 +400,8 @@ const tableLoadItems = async () => {
     tableProducts.value.splice(0, tableProducts.value.length, ...data.result.data)
     tableItemsLength.value = data.result.total
   } catch (error) {
-    console.log(error)
+    console.log('前端product/getAll錯誤',error)
+    console.log('前端product/getAll錯誤',error.message)
     const text = error?.response?.data?.message || '發生錯誤，請稍後再試'
     createSnackbar({
       text,

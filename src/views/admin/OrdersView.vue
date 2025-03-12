@@ -36,12 +36,12 @@ const createSnackbar = useSnackbar()
 
 const orders = ref([])
 const headers = [
-  { title: '訂單編號', key: '_id' },
-  { title: '帳號', key: 'user.account' },
-  { title: '取貨人', key: 'name' },
-  { title: '取貨日', key: 'date' },
-  { title: '取貨時間', key: 'time' },
-  { title: '商品', key: 'cart', sortable: false },
+  { title: '訂單編號', align: 'center', key: '_id' },
+  { title: '帳號', align: 'center', key: 'user.account' },
+  { title: '取貨人', align: 'center', key: 'name' },
+  { title: '取貨日', align: 'center', key: 'date' },
+  { title: '取貨時間', align: 'center', key: 'time' },
+  { title: '商品', align: 'center', key: 'cart', sortable: false },
   {
     title: '訂購金額',
     key: 'price',
