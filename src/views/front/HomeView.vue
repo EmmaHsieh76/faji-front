@@ -6,27 +6,27 @@
     height="calc(100vh - 64px)"
   >
     <v-carousel-item v-for="(item, i) in items" :key="i">
-      <RourerLink to="/introduce">
-           <!-- 背景圖片 -->
+      <RouterLink to="/introduce">
+        <!-- 背景圖片 -->
         <div class="carousel-image" :style="{ backgroundImage: `url(${item.src})` }">
           <!-- 半透明遮罩，根據 index 切換位置 -->
-          <div 
-            class="overlay" 
+          <div
+            class="overlay"
             :class="{ 'overlay-left': i % 2 !== 0, 'overlay-right': i % 2 === 0 }"
           ></div>
-          
+
           <!-- 文字內容，根據 index 切換位置 -->
           <v-container class="text-container" :class="{ 'text-left': i % 2 !== 0, 'text-right': i % 2 === 0 }">
             <v-row :justify="i % 2 !== 0 ? 'start' : 'end'">
               <v-col cols="12" sm="7" md="6"  class="text-center">
                 <h1 id="title" class="font-weight-black mb-5">{{ item.title }}</h1>
-                <h1 id="text" class="font-weight-bold" 
+                <h1 id="text" class="font-weight-bold"
                 >{{ item.text }}</h1>
               </v-col>
             </v-row>
           </v-container>
         </div>
-      </RourerLink>
+      </RouterLink>
     </v-carousel-item>
   </v-carousel>
 </template>
@@ -38,7 +38,7 @@ const items = ref([
   {
     src: new URL('@/assets/Carousel-8.jpg', import.meta.url).href,
     title: '品味經典',
-    text: '新鮮每日現做',
+    text: '新鮮每日現做'
   },
   {
     src: new URL('@/assets/Carousel-9.jpg', import.meta.url).href,
@@ -100,7 +100,6 @@ const items = ref([
   right: 0;
 }
 
-
 /* 響應式設計 */
 @media (max-width: 600px) {
   /* 小螢幕時調整遮罩和文字的位置 */
@@ -135,7 +134,7 @@ const items = ref([
   color: rgba(0, 0, 0, 0.65);
   letter-spacing: 5px;
   }
-  
+
 }
 
 /* sm */
@@ -150,7 +149,7 @@ const items = ref([
     letter-spacing: 7px!important;
     font-size: 6rem;
   }
-  
+
   #text {
     color: rgba(0, 0, 0, 0.65);
     letter-spacing: 10px!important;
@@ -162,11 +161,8 @@ const items = ref([
 @media (min-width: 960px) {
 
   .overlay {
-    width: 40%; 
+    width: 40%;
   }
 }
-
-
-
 
 </style>
