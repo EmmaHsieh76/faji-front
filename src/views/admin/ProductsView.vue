@@ -53,12 +53,14 @@
           </v-row>
         </template>
         <template #[`item.image`]="{item}">
-          <RouterLink :to="'/products/' + item._id" class="d-flex justify-center align-center">
+          <RouterLink :to="'/products/' + item._id" class="d-flex justify-center align-center"
+          style="max-width: 100px; max-height: 100px; width: 100%; height: auto;">
              <v-img 
               :src="item.images[0]" 
-              height="100px"
-              width="100px"
-              aspect-ratio="1/1"
+              max-height="100"
+              max-width="100"
+              width="100%"
+              height="auto"
               cover
               rounded="lg"
               class="my-3"
