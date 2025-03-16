@@ -269,7 +269,21 @@ const editAvatar = async () => {
   avatarSubmiting.value = false
 }
 
-
+onMounted(async () => {
+  try {
+    user.getProfile()
+  } catch (error) {
+    createSnackbar({
+      text: '沒取到pinia發生錯誤，請稍後再試',
+      showCloseButton: false,
+      snackbarProps: {
+        timeout: 2000,
+        color: 'seventh',
+        location: 'bottom'
+      }
+    })
+  }
+})
 </script>
 
 

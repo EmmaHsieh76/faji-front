@@ -52,16 +52,18 @@
             </v-col>
           </v-row>
         </template>
-        <template #[`item.image`]="{item}" class="d-flex justify-center align-center">
-          <v-img 
+        <template #[`item.image`]="{item}">
+          <RouterLink :to="'/products/' + item._id">
+             <v-img 
           :src="item.images[0]" 
-          height="100"
-          width="100"
+          height="100px"
           aspect-ratio="1/1"
           cover
           rounded="lg"
           class="my-3"
           ></v-img>
+          </RouterLink>
+         
         </template>
         <template #[`item.sell`]="{item}">
           <v-icon color="sixth" :icon="item.sell ? 'mdi-check':'mdi-minus'"
