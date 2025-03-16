@@ -57,6 +57,7 @@
              <v-img 
           :src="item.images[0]" 
           height="100px"
+          width="100px"
           aspect-ratio="1/1"
           cover
           rounded="lg"

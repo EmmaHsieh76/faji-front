@@ -1,11 +1,9 @@
 <template>
 <v-navigation-drawer permanent>
-  <RouterLink to="'/member/profile'">
     <v-list>
-      <v-list-item :prepend-avatar="user.avatar" :title="user.account">
+      <v-list-item :prepend-avatar="user.avatar" :title="user.account" >
       </v-list-item>
     </v-list>
-  </RouterLink>
   <v-divider></v-divider>
   <v-list>
     <v-list-item v-for="item in navItems" :key="item.to" :title="item.text" :prepend-icon="item.icon" :to="item.to"
@@ -52,4 +50,5 @@ onMounted(() => {
   text-align: center;
   margin-top: 50px;
 }
+
 </style>

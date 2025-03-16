@@ -274,7 +274,7 @@ onMounted(async () => {
     user.getProfile()
   } catch (error) {
     createSnackbar({
-      text: '沒取到pinia發生錯誤，請稍後再試',
+      text: '沒取到pinia，發生錯誤，請稍後再試',
       showCloseButton: false,
       snackbarProps: {
         timeout: 2000,
