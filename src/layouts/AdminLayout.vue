@@ -1,6 +1,6 @@
 <template>
 <v-navigation-drawer permanent>
-  <RouterLink :to="'/member/profile'">
+  <RouterLink to="'/member/profile'">
     <v-list>
       <v-list-item :prepend-avatar="user.avatar" :title="user.account">
       </v-list-item>
@@ -19,6 +19,7 @@
 
 <script setup>
 import { useUserStore } from '@/store/user'
+import { onMounted } from 'vue'
 
 const user = useUserStore()
 
