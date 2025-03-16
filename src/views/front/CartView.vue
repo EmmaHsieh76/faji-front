@@ -13,13 +13,11 @@
     :headers="headers"
     >
       <template #[`item.product.images[0]`]="{ item }">
-        <RouterLink :to="'/products/'+ item.product._id" class="d-flex justify-center align-center " style="max-width: 200px; max-height: 200px; width: 100%; height: auto;">
+        <RouterLink :to="'/products/'+ item.product._id" class="d-flex justify-center align-center " style="max-width: 100px; max-height: 100px">
           <v-img
           :src="item.product.images[0]"
-          max-width="200"
-          max-height="200"
-          width="100%"
-          height="auto"
+          width="200"
+          height="200"
           cover
           rounded="lg"
           class="my-3"

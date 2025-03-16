@@ -54,13 +54,11 @@
         </template>
         <template #[`item.image`]="{item}">
           <RouterLink :to="'/products/' + item._id" class="d-flex justify-center align-center"
-          style="max-width: 100px; max-height: 100px; width: 100%; height: auto;">
+          style="width: 100px; height: 100px">
              <v-img 
               :src="item.images[0]" 
-              max-height="100"
-              max-width="100"
-              width="100%"
-              height="auto"
+              height="100"
+              width="100"
               cover
               rounded="lg"
               class="my-3"
