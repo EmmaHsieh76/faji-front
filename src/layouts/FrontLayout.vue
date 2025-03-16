@@ -8,9 +8,9 @@
     width="256"
   >
     <v-list nav>
-      <template v-for="item in navItems" :key="item.to">
+      <template v-for="item in navItems" :key="item.to" class="font-weight-bold">
         <!-- :to綁定可以換頁 -->
-        <v-list-item :to="item.to" v-if="item.show">
+        <v-list-item :to="item.to" v-if="item.show" >
           <template #append>
             <v-badge
               color="seventh"

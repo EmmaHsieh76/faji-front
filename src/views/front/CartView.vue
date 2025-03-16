@@ -8,6 +8,7 @@
   <v-divider></v-divider>
   <v-col cols="12">
     <v-data-table
+    class="text-h5 font-weight-bold"
     :items="cart"
     :headers="headers"
     >
@@ -15,8 +16,8 @@
         <RouterLink :to="'/products/'+ item.product._id" class="d-flex justify-center align-center">
           <v-img
           :src="item.product.images[0]"
-          width="200"
-          height="200"
+          width="200px"
+          height="200px"
           aspect-ratio="1/1"
           cover
           rounded="lg"
@@ -169,12 +170,12 @@ const rules = ref({
 })
 const cart = ref([])
 const headers = [
-  { title: '圖片', key: 'product.images[0]', align: 'center' },
-  { title: '名稱', key: 'product.name', align: 'center' },
-  { title: '單價', key: 'product.price', align: 'center' },
-  { title: '數量', key: 'quantity', align: 'center' },
-  { title: '總價', key: 'total', value: item => item.product.price * item.quantity, align: 'center' },
-  { title: '刪除', key: 'action', align: 'center' }
+  { title: '圖片', key: 'product.images[0]', align: 'center',sortable: false },
+  { title: '名稱', key: 'product.name', align: 'center',sortable: false },
+  { title: '單價', key: 'product.price', align: 'center',sortable: true },
+  { title: '數量', key: 'quantity', align: 'center',sortable: true },
+  { title: '總價', key: 'total', value: item => item.product.price * item.quantity, align: 'center',sortable: true },
+  { title: '刪除', key: 'action', align: 'center',sortable: false }
 ]
 
 const total = computed(() => {

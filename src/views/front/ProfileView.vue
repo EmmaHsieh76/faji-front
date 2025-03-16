@@ -7,7 +7,7 @@
         <VBtn icon="mdi-pencil" size="x-small" color="third" style="vertical-align: bottom"  variant="tonal"
         @click="openDialog"
         ></VBtn>
-        <h2 class="third">{{ user.account }}</h2>
+        <h2>{{ user.name }}</h2>
       </VCol>
       <VCol cols="12" md="6" lg="6" >
           <VCard class="bg-eigth">
@@ -231,9 +231,6 @@ const editAvatar = async () => {
     if (fileRecords.value.length > 0) {
       fd.append('image', fileRecords.value[0].file)
     }
-
-    // 立即更新 UI，讓用戶先看到新頭像
-    user.avatar = URL.createObjectURL(fileRecords.value[0].file) 
 
      await apiAuth.patch('/users/avatar', fd)
 
