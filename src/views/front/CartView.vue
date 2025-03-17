@@ -12,12 +12,12 @@
     :items="cart"
     :headers="headers"
     >
-      <template #[`item.product.images[0]`]="{ item }">
-        <RouterLink :to="'/products/'+ item.product._id" class="d-flex justify-center align-center " style="max-width: 100px; max-height: 100px">
+      <template #[`item.product.images[0]`]="{ item }" class="d-flex justify-center">
+        <RouterLink :to="'/products/'+ item.product._id"  style="width: 100px; height: 100px">
           <v-img
           :src="item.product.images[0]"
-          width="200"
-          height="200"
+          width="100"
+          height="100"
           cover
           rounded="lg"
           class="my-3"

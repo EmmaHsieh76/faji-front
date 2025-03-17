@@ -52,8 +52,8 @@
             </v-col>
           </v-row>
         </template>
-        <template #[`item.image`]="{item}">
-          <RouterLink :to="'/products/' + item._id" class="d-flex justify-center align-center"
+        <template #[`item.image`]="{item}" class="d-flex justify-center">
+          <RouterLink :to="'/products/' + item._id" 
           style="width: 100px; height: 100px">
              <v-img 
               :src="item.images[0]" 

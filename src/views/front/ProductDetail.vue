@@ -24,7 +24,7 @@
             </td>
           </tr>
           <tr class="d-flex justify-center ma-2 pa-2">
-            <td v-for="(pic,i) in product.images" :key="i">
+            <td v-for="(pic,i) in product.images" :key="i" class="mx-5">
               <v-img
               :width="70"
               :height="70"
