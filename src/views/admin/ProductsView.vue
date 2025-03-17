@@ -52,19 +52,19 @@
             </v-col>
           </v-row>
         </template>
-        <template #[`item.image`]="{item}" class="d-flex justify-center">
-          <RouterLink :to="'/products/' + item._id" 
-          style="width: 100px; height: 100px">
-             <v-img 
-              :src="item.images[0]" 
-              height="100"
-              width="100"
-              cover
-              rounded="lg"
-              class="my-3"
-          ></v-img>
-          </RouterLink>
-         
+        <template #[`item.image`]="{item}">
+          <div class="d-flex justify-center">
+             <RouterLink :to="'/products/' + item._id"  style="width: 100px; height: 100px">
+              <v-img 
+                :src="item.images[0]" 
+                height="100"
+                width="100"
+                cover
+                rounded="lg"
+                class="my-3"
+              ></v-img>
+             </RouterLink>
+          </div>
         </template>
         <template #[`item.sell`]="{item}">
           <v-icon color="sixth" :icon="item.sell ? 'mdi-check':'mdi-minus'"

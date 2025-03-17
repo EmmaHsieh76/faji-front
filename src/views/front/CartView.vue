@@ -13,7 +13,8 @@
     :headers="headers"
     >
       <template #[`item.product.images[0]`]="{ item }" class="d-flex justify-center">
-        <RouterLink :to="'/products/'+ item.product._id"  style="width: 100px; height: 100px">
+        <div class="d-flex justify-center"> 
+          <RouterLink :to="'/products/'+ item.product._id"  style="width: 100px; height: 100px">
           <v-img
           :src="item.product.images[0]"
           width="100"
@@ -22,7 +23,8 @@
           rounded="lg"
           class="my-3"
           ></v-img>
-        </RouterLink>
+          </RouterLink>
+        </div>
       </template>
       <template #[`item.product.name`]="{item}">
         <span v-if="item.product.sell">{{item.product.name}}</span>
