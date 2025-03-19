@@ -3,7 +3,7 @@
     <v-row class="mt-5">
       <v-col cols="12" md="3" class="d-flex justify-center">
         <v-card
-          min-width="250"
+          min-width="230"
         >
           <v-list>
             <v-list-subheader class="font-weight-bold">會員中心</v-list-subheader>
