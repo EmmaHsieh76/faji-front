@@ -13,16 +13,15 @@
     :headers="headers"
     >
       <template #[`item.product.images[0]`]="{ item }" class="d-flex justify-center">
-        <div class="d-flex justify-center"> 
+        <div class="d-flex justify-center my-3"> 
           <RouterLink :to="'/products/'+ item.product._id"  style="width: 100px; height: 100px">
-          <v-img
-          :src="item.product.images[0]"
-          width="100"
-          height="100"
-          cover
-          rounded="lg"
-          class="my-3"
-          ></v-img>
+            <v-img
+            :src="item.product.images[0]"
+            width="100"
+            height="100"
+            cover
+            rounded="lg"
+            ></v-img>
           </RouterLink>
         </div>
       </template>

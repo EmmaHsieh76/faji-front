@@ -53,7 +53,7 @@
           </v-row>
         </template>
         <template #[`item.image`]="{item}">
-          <div class="d-flex justify-center">
+          <div class="d-flex justify-center my-3">
              <RouterLink :to="'/products/' + item._id"  style="width: 100px; height: 100px">
               <v-img 
                 :src="item.images[0]" 
@@ -61,7 +61,6 @@
                 width="100"
                 cover
                 rounded="lg"
-                class="my-3"
               ></v-img>
              </RouterLink>
           </div>
