@@ -41,11 +41,11 @@
         <h2><font color="#D92323">【{{product.category}}】</font>&nbsp;{{product.name}}</h2>
         <v-divider></v-divider>
         <p class="my-2 font-weight-bold">售價{{product.price}}</p>
-        <p style="white-space: pre;">{{product.description}}</p>
+        <p style="white-space: pre-line;">{{product.description}}</p>
         <v-form :disabled="isSubmitting" @submit.prevent="submit">
               <v-text-field type="number" min="0" v-model.number="quantity.value.value" :error-messages="quantity.errorMessage.value" density="confortable" variant="outlined" placeholder="數量"
-              style="width: 570px"
-              ></v-text-field>
+              class="w-100">
+              </v-text-field>
               <v-btn type="submit" prepend-icon="mdi-cart" :loading="isSubmitting"
               style="width:570px" color="seventh">加入購物車</v-btn>
 
