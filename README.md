@@ -1,53 +1,6 @@
-# default
+# 發記冰品—購物網《專題網站》
 
-## Project setup
+###  前後端串接作品
+#### 使用網路免費資源製作，剛進入需稍等片刻載入
+#### 立即前往：[發記冰品購物網](https://emmahsieh76.github.io/faji-front/#/)
 
-```
-# yarn
-yarn
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# bun
-bun install
-```
-
-### Compiles and hot-reloads for development
-
-```
-# yarn
-yarn dev
-
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# bun
-bun run dev
-```
-
-### Compiles and minifies for production
-
-```
-# yarn
-yarn build
-
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# bun
-bun run build
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://vitejs.dev/config/).
