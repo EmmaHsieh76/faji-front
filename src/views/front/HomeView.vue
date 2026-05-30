@@ -11,20 +11,15 @@
         <div class="carousel-image" :style="{ backgroundImage: `url(${item.src})` }">
           <!-- 半透明遮罩，根據 index 切換位置 -->
           <div
-            class="overlay"
+            class="overlay d-flex align-center justify-center flex-column"
             :class="{ 'overlay-left': i % 2 !== 0, 'overlay-right': i % 2 === 0 }"
-          ></div>
+          >
+            <div class="text-content text-center">
+              <h1 class="carousel-title font-weight-black mb-5">{{ item.title }}</h1>
+              <h1 class="carousel-text font-weight-bold">{{ item.text }}</h1>
+            </div>
 
-          <!-- 文字內容，根據 index 切換位置 -->
-          <v-container class="text-container" :class="{ 'text-left': i % 2 !== 0, 'text-right': i % 2 === 0 }">
-            <v-row :justify="i % 2 !== 0 ? 'start' : 'end'">
-              <v-col cols="12" sm="7" md="6"  class="text-center">
-                <h1 id="title" class="font-weight-black mb-5">{{ item.title }}</h1>
-                <h1 id="text" class="font-weight-bold"
-                >{{ item.text }}</h1>
-              </v-col>
-            </v-row>
-          </v-container>
+          </div>
         </div>
       </RouterLink>
     </v-carousel-item>
@@ -71,9 +66,10 @@ const items = ref([
 .overlay {
   position: absolute;
   top: 0;
-  width: 40%;
   height: 100%;
   background: rgba(255, 255, 255, 0.4); /* 白色半透明 */
+  transition: all 0.5s ease; /* 讓變換尺寸更平滑 */
+  padding: 20px; /* 內邊距 */
 }
 
 .overlay-left {
@@ -85,83 +81,65 @@ const items = ref([
 }
 
 /* 文字區塊 */
-.text-container {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
+.carousel-title {
+  color: rgba(0, 0, 0, 0.65);
+  letter-spacing: 7px !important;
+  font-size: 6rem; 
 }
 
-.text-left {
-  left: 0;
+.carousel-text {
+  color: rgba(0, 0, 0, 0.65);
+  letter-spacing: 10px !important;
+  font-size: 2.5rem; 
 }
 
-.text-right {
-  right: 0;
-}
-
-/* 響應式設計 */
+/* 響應式設計：根據螢幕大小調整遮罩和文字尺寸 */
+/* RWD：手機版 (xs) */
 @media (max-width: 600px) {
-  /* 小螢幕時調整遮罩和文字的位置 */
   .overlay {
-    width: 100%; /* 完全覆蓋 */
-    height: 50%; /* 只覆蓋一半 */
-    top: 50%; /* 從中間開始覆蓋 */
-    transform: translateY(-50%);
-    display: block!important; /* 顯示遮罩 */
+    width: 100% !important;   /* 寬度撐滿 */
+    height: 40% !important;   /* 高度縮小，避免全遮 */
+    top: 50% !important;      /* 垂直居中 */
+    left: 50% !important;
+    transform: translate(-50%, -50%); /* 靠這行在手機版完美置中 */
   }
 
-  .overlay-left, .overlay-right {
-    display: none; /* 隱藏左右遮罩 */
+  .carousel-title {
+    font-size: 3rem; /* 手機版字體縮小，避免爆開 */
   }
 
-  .text-container {
-    top: 50%; /* 改變文字區塊的位置 */
-    transform: translateY(-50%);
+  .carousel-text {
+    font-size: 1.8rem;
   }
-
-  .text-left, .text-right {
-    text-align: center; /* 文字居中 */
-  }
-
-  #title {
-  color: rgba(0, 0, 0, 0.65);
-  font-size: 5rem; /* 調整標題字體大小 */
 }
 
-  #text {
-  font-size: 3rem; /* 調整內文字體大小 */
-  color: rgba(0, 0, 0, 0.65);
-  letter-spacing: 5px;
-  }
-
-}
-
-/* sm */
+/* RWD：平板 (sm) */
 @media (min-width: 601px) {
-
   .overlay {
     width: 60%;
   }
-
-  #title {
-    color: rgba(0, 0, 0, 0.65);
-    letter-spacing: 7px!important;
-    font-size: 6rem;
+  
+  .carousel-title {
+    font-size: 4rem;
   }
 
-  #text {
-    color: rgba(0, 0, 0, 0.65);
-    letter-spacing: 10px!important;
-    font-size: 3rem;
+  .carousel-text {
+    font-size: 2.2rem;
   }
 }
 
-/* md */
+/* RWD：電腦版 (md 以上) */
 @media (min-width: 960px) {
-
   .overlay {
     width: 40%;
+  }
+
+  .carousel-title {
+    font-size: 5rem;
+  }
+
+  .carousel-text {
+    font-size: 2.5rem;
   }
 }
 
