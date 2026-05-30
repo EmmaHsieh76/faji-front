@@ -79,7 +79,7 @@
         v-model="DateValue"
         :allowed-dates="allowedDates"
         :min="minDate"
-        max="2025-12-31"
+        max="2030-12-31"
         color="forth" />
     </VMenu>
   </v-col>
